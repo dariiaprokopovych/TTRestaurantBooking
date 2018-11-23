@@ -12,6 +12,10 @@
 		DEE5D91B21A7488C0057F4F1 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEE5D91921A7488C0057F4F1 /* Login.storyboard */; };
 		DEE5D91D21A7488E0057F4F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DEE5D91C21A7488E0057F4F1 /* Assets.xcassets */; };
 		DEE5D92021A7488E0057F4F1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEE5D91E21A7488E0057F4F1 /* LaunchScreen.storyboard */; };
+		DEE5D92C21A889330057F4F1 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE5D92B21A889330057F4F1 /* UIColor+Extensions.swift */; };
+		DEE5D93021A88F000057F4F1 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE5D92F21A88F000057F4F1 /* LoginVC.swift */; };
+		DEE5D93221A88F130057F4F1 /* RegistrationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE5D93121A88F130057F4F1 /* RegistrationVC.swift */; };
+		DEE5D93421A88F280057F4F1 /* RoleChoosingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE5D93321A88F280057F4F1 /* RoleChoosingVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,10 @@
 		DEE5D91C21A7488E0057F4F1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DEE5D91F21A7488E0057F4F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DEE5D92121A7488E0057F4F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DEE5D92B21A889330057F4F1 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
+		DEE5D92F21A88F000057F4F1 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		DEE5D93121A88F130057F4F1 /* RegistrationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationVC.swift; sourceTree = "<group>"; };
+		DEE5D93321A88F280057F4F1 /* RoleChoosingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoleChoosingVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,8 +62,8 @@
 		DEE5D91421A7488C0057F4F1 /* TTRestaurantBooking */ = {
 			isa = PBXGroup;
 			children = (
-				DEE5D92821A885760057F4F1 /* UserModul */,
-				DEE5D92721A7554E0057F4F1 /* Login */,
+				DEE5D92A21A889110057F4F1 /* Extensions */,
+				DEE5D92921A888F50057F4F1 /* Modules */,
 				DEE5D91521A7488C0057F4F1 /* AppDelegate.swift */,
 				DEE5D91721A7488C0057F4F1 /* ViewController.swift */,
 				DEE5D91C21A7488E0057F4F1 /* Assets.xcassets */,
@@ -69,6 +77,9 @@
 			isa = PBXGroup;
 			children = (
 				DEE5D91921A7488C0057F4F1 /* Login.storyboard */,
+				DEE5D92F21A88F000057F4F1 /* LoginVC.swift */,
+				DEE5D93121A88F130057F4F1 /* RegistrationVC.swift */,
+				DEE5D93321A88F280057F4F1 /* RoleChoosingVC.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -78,6 +89,23 @@
 			children = (
 			);
 			path = UserModul;
+			sourceTree = "<group>";
+		};
+		DEE5D92921A888F50057F4F1 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				DEE5D92721A7554E0057F4F1 /* Login */,
+				DEE5D92821A885760057F4F1 /* UserModul */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		DEE5D92A21A889110057F4F1 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				DEE5D92B21A889330057F4F1 /* UIColor+Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,7 +179,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DEE5D93421A88F280057F4F1 /* RoleChoosingVC.swift in Sources */,
 				DEE5D91821A7488C0057F4F1 /* ViewController.swift in Sources */,
+				DEE5D92C21A889330057F4F1 /* UIColor+Extensions.swift in Sources */,
+				DEE5D93021A88F000057F4F1 /* LoginVC.swift in Sources */,
+				DEE5D93221A88F130057F4F1 /* RegistrationVC.swift in Sources */,
 				DEE5D91621A7488C0057F4F1 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

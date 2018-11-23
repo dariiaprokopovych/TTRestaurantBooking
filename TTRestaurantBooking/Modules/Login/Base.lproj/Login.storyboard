@@ -194,7 +194,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="92T-gI-GWa">
-                                <rect key="frame" x="30" y="161" width="315" height="298"/>
+                                <rect key="frame" x="30" y="144" width="315" height="298"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lXc-9X-gLQ">
                                         <rect key="frame" x="0.0" y="0.0" width="315" height="30"/>
@@ -254,7 +254,7 @@
                         <constraints>
                             <constraint firstItem="92T-gI-GWa" firstAttribute="centerX" secondItem="DgG-Lf-6gS" secondAttribute="centerX" id="AAT-Ce-39f"/>
                             <constraint firstItem="92T-gI-GWa" firstAttribute="leading" secondItem="DgG-Lf-6gS" secondAttribute="leading" constant="30" id="Hmf-Ka-lAL"/>
-                            <constraint firstItem="92T-gI-GWa" firstAttribute="top" secondItem="DgG-Lf-6gS" secondAttribute="top" constant="97" id="WMo-dx-deN"/>
+                            <constraint firstItem="92T-gI-GWa" firstAttribute="top" secondItem="DgG-Lf-6gS" secondAttribute="top" constant="80" id="WMo-dx-deN"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="DgG-Lf-6gS"/>
                     </view>

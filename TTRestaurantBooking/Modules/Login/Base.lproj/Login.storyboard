@@ -25,7 +25,7 @@
             </objects>
             <point key="canvasLocation" x="-1468" y="134"/>
         </scene>
-        <!--LOGIN-->
+        <!--Login-->
         <scene sceneID="v1C-Zm-C61">
             <objects>
                 <viewController id="WKr-3q-EkG" customClass="LoginVC" customModule="TTRestaurantBooking" customModuleProvider="target" sceneMemberID="viewController">
@@ -80,7 +80,7 @@
                                             <constraint firstAttribute="height" constant="50" id="Wm6-2M-f2e"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                        <state key="normal" title="LOGIN">
+                                        <state key="normal" title="Login">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                     </button>
@@ -108,7 +108,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="CNQ-O2-KQJ"/>
                     </view>
-                    <navigationItem key="navigationItem" title="LOGIN" id="lje-hH-otg"/>
+                    <navigationItem key="navigationItem" title="Login" id="lje-hH-otg"/>
                     <connections>
                         <outlet property="emailTextField" destination="qDV-MM-PMS" id="1O1-qN-FE1"/>
                         <outlet property="passwordTextField" destination="4KM-9p-uEx" id="YV9-Nv-1wr"/>
@@ -118,7 +118,7 @@
             </objects>
             <point key="canvasLocation" x="-622" y="131"/>
         </scene>
-        <!--REGISTRATION-->
+        <!--Registration-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TTRestaurantBooking" customModuleProvider="target" sceneMemberID="viewController">
@@ -176,7 +176,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="REGISTRATION" id="xiC-wY-Sdp"/>
+                    <navigationItem key="navigationItem" title="Registration" id="xiC-wY-Sdp"/>
                     <connections>
                         <segue destination="za9-YT-qhP" kind="show" id="mI0-UA-c7W"/>
                     </connections>
@@ -185,7 +185,7 @@
             </objects>
             <point key="canvasLocation" x="274" y="131"/>
         </scene>
-        <!--REGISTRATION-->
+        <!--Registration-->
         <scene sceneID="IUw-EI-Shf">
             <objects>
                 <viewController id="za9-YT-qhP" sceneMemberID="viewController">
@@ -235,7 +235,7 @@
                                             <constraint firstAttribute="height" constant="50" id="2uD-Gu-HCe"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <state key="normal" title="REGISTER">
+                                        <state key="normal" title="Register">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
@@ -258,7 +258,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="DgG-Lf-6gS"/>
                     </view>
-                    <navigationItem key="navigationItem" title="REGISTRATION" id="WeR-ap-FOQ"/>
+                    <navigationItem key="navigationItem" title="Registration" id="WeR-ap-FOQ"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IVS-HQ-yrL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

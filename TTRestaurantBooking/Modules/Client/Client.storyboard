@@ -31,7 +31,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="qDJ-Df-goO"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Restaurants" id="bhB-76-6i5"/>
+                    <navigationItem key="navigationItem" title="Restaurants" id="bhB-76-6i5">
+                        <barButtonItem key="rightBarButtonItem" title="Log Out" id="kNl-xl-dl7"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ddR-iy-G9c" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -109,7 +111,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="MIE-JL-azD"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Search restaurants" id="MSf-UA-07V"/>
+                    <navigationItem key="navigationItem" title="Search restaurants" id="MSf-UA-07V">
+                        <barButtonItem key="rightBarButtonItem" title="Log Out" id="ZOp-TS-3Hh"/>
+                    </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <segue destination="6Pb-Zm-BaU" kind="show" id="YFa-PJ-iez"/>

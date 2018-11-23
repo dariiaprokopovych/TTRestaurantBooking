@@ -1,5 +1,5 @@
 //
-//  RestaurantListVC.swift
+//  CreateTableVC.swift
 //  TTRestaurantBooking
 //
 //  Created by Dariya on 11/23/18.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RestaurantListVC: UserBaseViewController {
+class CreateTableVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

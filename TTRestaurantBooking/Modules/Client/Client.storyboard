@@ -12,7 +12,7 @@
         <!--Restaurants-->
         <scene sceneID="s0O-gQ-HiP">
             <objects>
-                <viewController id="6Pb-Zm-BaU" sceneMemberID="viewController">
+                <viewController id="6Pb-Zm-BaU" customClass="RestaurantListVC" customModule="TTRestaurantBooking" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Mr0-Kg-sQX">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -42,7 +42,7 @@
         <!--Search restaurants-->
         <scene sceneID="Dki-za-0JT">
             <objects>
-                <viewController id="yuM-3I-1bm" sceneMemberID="viewController">
+                <viewController id="yuM-3I-1bm" customClass="SearchRestaurantVC" customModule="TTRestaurantBooking" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Sb9-ee-IM4">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -103,7 +103,7 @@
                             <constraint firstItem="CNQ-O2-KQJ" firstAttribute="trailing" secondItem="0Ui-Cp-VP4" secondAttribute="trailing" id="JIk-WT-UPz"/>
                             <constraint firstItem="qar-Sn-RqL" firstAttribute="height" secondItem="0Ui-Cp-VP4" secondAttribute="height" multiplier="2:1" identifier="2:1" id="KA4-QJ-CUe"/>
                             <constraint firstItem="qar-Sn-RqL" firstAttribute="top" secondItem="0Ui-Cp-VP4" secondAttribute="bottom" id="XpS-Kw-RbR"/>
-                            <constraint firstItem="CNQ-O2-KQJ" firstAttribute="bottom" secondItem="qar-Sn-RqL" secondAttribute="bottom" id="b3L-YZ-pF6"/>
+                            <constraint firstAttribute="bottom" secondItem="qar-Sn-RqL" secondAttribute="bottom" id="b3L-YZ-pF6"/>
                             <constraint firstItem="0Ui-Cp-VP4" firstAttribute="top" secondItem="CNQ-O2-KQJ" secondAttribute="top" id="jTd-KB-nHr"/>
                             <constraint firstItem="qar-Sn-RqL" firstAttribute="leading" secondItem="CNQ-O2-KQJ" secondAttribute="leading" id="oZk-gG-1oe"/>
                             <constraint firstItem="MOr-zA-SKl" firstAttribute="width" secondItem="4KM-9p-uEx" secondAttribute="width" id="wYL-ON-XDQ"/>
@@ -170,12 +170,12 @@
                             <constraint firstItem="80y-17-ooe" firstAttribute="leading" secondItem="dXM-9v-XdO" secondAttribute="trailing" id="Epf-Gq-iB4"/>
                             <constraint firstItem="80y-17-ooe" firstAttribute="width" secondItem="dXM-9v-XdO" secondAttribute="width" id="Hxv-Fc-Tll"/>
                             <constraint firstItem="80y-17-ooe" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Io6-4y-JWh"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="80y-17-ooe" secondAttribute="bottom" id="JS3-Za-6vv"/>
+                            <constraint firstAttribute="bottom" secondItem="80y-17-ooe" secondAttribute="bottom" id="JS3-Za-6vv"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="80y-17-ooe" secondAttribute="trailing" id="Orz-ks-QVV"/>
                             <constraint firstItem="CvA-Qw-2dl" firstAttribute="width" secondItem="Iwj-C2-dEu" secondAttribute="width" id="jCB-D9-IUl"/>
                             <constraint firstItem="dXM-9v-XdO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="qon-yO-1fR"/>
                             <constraint firstItem="dXM-9v-XdO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="yyT-MG-SMB"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="dXM-9v-XdO" secondAttribute="bottom" id="zN2-CV-il5"/>
+                            <constraint firstAttribute="bottom" secondItem="dXM-9v-XdO" secondAttribute="bottom" id="zN2-CV-il5"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>

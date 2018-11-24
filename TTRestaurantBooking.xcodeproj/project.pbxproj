@@ -27,6 +27,9 @@
 		DEE5D94A21A8AC110057F4F1 /* RestaurantProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE5D94921A8AC110057F4F1 /* RestaurantProfileVC.swift */; };
 		DEE5D94C21A8AC480057F4F1 /* CreateTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE5D94B21A8AC480057F4F1 /* CreateTableVC.swift */; };
 		DEE5D94E21A8AC620057F4F1 /* CreateDishVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE5D94D21A8AC620057F4F1 /* CreateDishVC.swift */; };
+		DEE5D95021A94C2B0057F4F1 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE5D94F21A94C2B0057F4F1 /* BaseViewController.swift */; };
+		DEE5D95321A951FB0057F4F1 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE5D95221A951FB0057F4F1 /* NetworkManager.swift */; };
+		DEE5D95621A954AC0057F4F1 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE5D95521A954AC0057F4F1 /* UserModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +55,9 @@
 		DEE5D94921A8AC110057F4F1 /* RestaurantProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantProfileVC.swift; sourceTree = "<group>"; };
 		DEE5D94B21A8AC480057F4F1 /* CreateTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTableVC.swift; sourceTree = "<group>"; };
 		DEE5D94D21A8AC620057F4F1 /* CreateDishVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateDishVC.swift; sourceTree = "<group>"; };
+		DEE5D94F21A94C2B0057F4F1 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		DEE5D95221A951FB0057F4F1 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		DEE5D95521A954AC0057F4F1 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +90,8 @@
 		DEE5D91421A7488C0057F4F1 /* TTRestaurantBooking */ = {
 			isa = PBXGroup;
 			children = (
+				DEE5D95421A954770057F4F1 /* Models */,
+				DEE5D95121A951370057F4F1 /* Managers */,
 				DEE5D93921A8920F0057F4F1 /* Views */,
 				DEE5D92A21A889110057F4F1 /* Extensions */,
 				DEE5D92921A888F50057F4F1 /* Modules */,
@@ -169,8 +177,25 @@
 			isa = PBXGroup;
 			children = (
 				DEE5D93F21A89A760057F4F1 /* UserBaseViewController.swift */,
+				DEE5D94F21A94C2B0057F4F1 /* BaseViewController.swift */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		DEE5D95121A951370057F4F1 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				DEE5D95221A951FB0057F4F1 /* NetworkManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		DEE5D95421A954770057F4F1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DEE5D95521A954AC0057F4F1 /* UserModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -251,8 +276,11 @@
 				DEE5D93D21A892500057F4F1 /* RestaurantCell.swift in Sources */,
 				DEE5D93421A88F280057F4F1 /* RoleChoosingVC.swift in Sources */,
 				DEE5D94A21A8AC110057F4F1 /* RestaurantProfileVC.swift in Sources */,
+				DEE5D95321A951FB0057F4F1 /* NetworkManager.swift in Sources */,
 				DEE5D94621A8AB690057F4F1 /* SearchRestaurantVC.swift in Sources */,
+				DEE5D95021A94C2B0057F4F1 /* BaseViewController.swift in Sources */,
 				DEE5D91821A7488C0057F4F1 /* ViewController.swift in Sources */,
+				DEE5D95621A954AC0057F4F1 /* UserModel.swift in Sources */,
 				DEE5D93621A890AA0057F4F1 /* RestaurantListVC.swift in Sources */,
 				DEE5D92C21A889330057F4F1 /* UIColor+Extensions.swift in Sources */,
 				DEE5D94E21A8AC620057F4F1 /* CreateDishVC.swift in Sources */,

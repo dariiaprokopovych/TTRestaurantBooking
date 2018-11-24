@@ -255,6 +255,9 @@
                                                 <integer key="value" value="4"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="onRegister:" destination="za9-YT-qhP" eventType="touchUpInside" id="Vyi-ci-2XY"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -268,6 +271,13 @@
                         <viewLayoutGuide key="safeArea" id="DgG-Lf-6gS"/>
                     </view>
                     <navigationItem key="navigationItem" title="Registration" id="WeR-ap-FOQ"/>
+                    <connections>
+                        <outlet property="ageTextField" destination="GRo-aH-XWf" id="yCm-SE-BiW"/>
+                        <outlet property="emailTextField" destination="6Hr-rX-AAX" id="oG6-v1-CRq"/>
+                        <outlet property="nameTextField" destination="lXc-9X-gLQ" id="l3Q-JX-l3S"/>
+                        <outlet property="passwordTextField" destination="MjI-fZ-kpK" id="oKF-D6-aLn"/>
+                        <outlet property="sexSegmentControl" destination="IM1-we-f9j" id="FDt-tz-BtW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IVS-HQ-yrL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

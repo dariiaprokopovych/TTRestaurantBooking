@@ -8,6 +8,11 @@
 
 import UIKit
 
+enum Sex: Int {
+    case male
+    case female
+}
+
 enum Role: Int {
     case client
     case owner
@@ -23,6 +28,11 @@ enum Role: Int {
 }
 
 class UserModel {
+    var id: Int = -1
     var role: Role = Role(rawValue: 0)!
+    var name: String = ""
+    var email: String = ""
+    var password: String = ""
+    var age: Int = -1
     
 }

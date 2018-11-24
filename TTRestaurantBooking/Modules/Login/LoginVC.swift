@@ -28,7 +28,7 @@ class LoginVC: BaseViewController {
                 showErrorAlert(message: "Please fill required fields")
                 return
         }
-        NetworkManager.login(email: email, password: password) { [weak self] isSuccess, error, data in
+        LoginNetworkManager.login(email: email, password: password) { [weak self] isSuccess, error, data in
             guard let self = self else { return }
             guard isSuccess, let userModel = data as? UserModel  else {
                 self.showErrorAlert(message: error?.localizedDescription)

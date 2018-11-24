@@ -28,19 +28,20 @@ class SearchRestaurantVC: UserBaseViewController {
     
     // MARK: - actions
     @IBAction func onSearch(_ sender: Any) {
-        guard (fromHoursTextField.text?.count ?? 0) > 0,
-        (toHoursTextField.text?.count ?? 0) > 0,
-        (dateTextField.text?.count ?? 0) > 0 else {
-            showErrorAlert(message: "Please fill all required data")
-            return
-        }
+        //TODO: unsoment
+//        guard (fromHoursTextField.text?.count ?? 0) > 0,
+//        (toHoursTextField.text?.count ?? 0) > 0,
+//        (dateTextField.text?.count ?? 0) > 0 else {
+//            showErrorAlert(message: "Please fill all required data")
+//            return
+//        }
         ClientNetworkManager.searchForTable(amountOfPeople: amountOfPeople, date: datePicker.date, fromHours: fromHoursPicker.date, toHours: toHoursPicker.date) { [weak self] (isSuccess, error, data) in
             guard let self = self else { return }
-            guard isSuccess, let restaurants = data as? [Restaurants] else {
+            guard isSuccess, let restaurants = data as? [Restaurant] else {
                 self.showErrorAlert(message: error?.localizedDescription)
                 return
             }
-            
+            self.showRestaurants(restaurants: restaurants)
         }
     }
     

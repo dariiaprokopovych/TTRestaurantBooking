@@ -9,6 +9,7 @@
 import UIKit
 
 typealias Completion = ( _ isSuccess: Bool, _ error: Error?, _ data: Any?) -> ()
+typealias EmptyCompletion = ( _ isSuccess: Bool, _ error: Error?) -> ()
 
 class LoginNetworkManager {
 

@@ -52,6 +52,7 @@
                     <constraint firstItem="B0S-mg-PUj" firstAttribute="leading" secondItem="1z0-W4-9Mq" secondAttribute="leading" id="wLM-XB-af4"/>
                 </constraints>
             </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="minCheckLabel" destination="B0S-mg-PUj" id="Be5-pR-Kvi"/>

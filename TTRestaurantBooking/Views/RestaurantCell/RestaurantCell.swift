@@ -8,18 +8,26 @@
 
 import UIKit
 
+protocol RestaurantCellDelegate: class {
+    func bookRestaurant(restaurant: Restaurant)
+}
+
 class RestaurantCell: UITableViewCell {
 
     @IBOutlet weak var restaurantNameLabel: UILabel!
     @IBOutlet weak var minCheckLabel: UILabel!
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    weak var delegate: RestaurantCellDelegate?
+    var restaurant: Restaurant? {
+        didSet {
+            restaurantNameLabel?.text = restaurant?.name
+        }
     }
+    
 
     @IBAction func onBook(_ sender: Any) {
-        
+        guard let restaurant = restaurant else { return }
+        delegate?.bookRestaurant(restaurant: restaurant)
     }
     
 }

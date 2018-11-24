@@ -11,6 +11,10 @@ import UIKit
 class ClientNetworkManager {
 
     static func searchForTable(amountOfPeople: Int, date: Date, fromHours: Date, toHours: Date, completion: @escaping Completion) {
-        
+        completion(true, nil, [Restaurant(), Restaurant(), Restaurant()])
+    }
+    
+    static func bookRestaurant(restaurant: Restaurant, completion: @escaping EmptyCompletion) {
+        completion(true, nil)
     }
 }

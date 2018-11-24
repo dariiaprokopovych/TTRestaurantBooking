@@ -12,21 +12,62 @@ class RestaurantListVC: UserBaseViewController {
 
     var restaurants: [Restaurant] = []
     
+    @IBOutlet private weak var tableView: UITableView!
+    
+    // MARK: - life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        setupTableView()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    // MARK: - private
+    private func setupTableView() {
+        tableView.dataSource = self
+        tableView.tableFooterView = UIView(frame: CGRect.zero)
+        tableView.register(UINib(nibName: "\(RestaurantCell.self)", bundle: nil), forCellReuseIdentifier: "\(RestaurantCell.self)")
     }
-    */
 
+    private func showSuccessPopUp(name: String) {
+        let alert = UIAlertController(title: "Success", message: "You reservation in \(name) is created with success", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default) { (_) in
+            alert.dismiss(animated: true, completion: {
+                DispatchQueue.main.async {
+                    self.navigationController?.popViewController(animated: true)
+                }
+            })
+        }
+        alert.addAction(okAction)
+        present(alert, animated: true, completion: nil)
+    }
+}
+
+extension RestaurantListVC: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return restaurants.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "\(RestaurantCell.self)") as? RestaurantCell else {
+            return UITableViewCell()
+        }
+        cell.delegate = self
+        cell.restaurant = restaurants[indexPath.row]
+        return cell
+    }
+    
+}
+
+extension RestaurantListVC: RestaurantCellDelegate {
+    
+    func bookRestaurant(restaurant: Restaurant) {
+        ClientNetworkManager.bookRestaurant(restaurant: restaurant) {  isSuccess, error in
+            //guard let self = self else { return }
+            guard isSuccess else {
+                self.showErrorAlert(message: error?.localizedDescription)
+                return
+            }
+            self.showSuccessPopUp(name: restaurant.name)
+        }
+    }
+    
 }

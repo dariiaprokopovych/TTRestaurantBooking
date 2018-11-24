@@ -40,6 +40,8 @@
 		DEE5D96821A9C75E0057F4F1 /* TableModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE5D96721A9C75E0057F4F1 /* TableModel.swift */; };
 		DEE5D96B21A9C81C0057F4F1 /* DishTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE5D96921A9C81C0057F4F1 /* DishTVCell.swift */; };
 		DEE5D96C21A9C81C0057F4F1 /* DishTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEE5D96A21A9C81C0057F4F1 /* DishTVCell.xib */; };
+		DEE5D97021A9DE590057F4F1 /* TableTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE5D96E21A9DE590057F4F1 /* TableTVCell.swift */; };
+		DEE5D97121A9DE590057F4F1 /* TableTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEE5D96F21A9DE590057F4F1 /* TableTVCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -78,6 +80,8 @@
 		DEE5D96721A9C75E0057F4F1 /* TableModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableModel.swift; sourceTree = "<group>"; };
 		DEE5D96921A9C81C0057F4F1 /* DishTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishTVCell.swift; sourceTree = "<group>"; };
 		DEE5D96A21A9C81C0057F4F1 /* DishTVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DishTVCell.xib; sourceTree = "<group>"; };
+		DEE5D96E21A9DE590057F4F1 /* TableTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableTVCell.swift; sourceTree = "<group>"; };
+		DEE5D96F21A9DE590057F4F1 /* TableTVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableTVCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +172,7 @@
 		DEE5D93921A8920F0057F4F1 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				DEE5D96D21A9DC480057F4F1 /* TableCVCell */,
 				DEE5D96621A9C5A00057F4F1 /* DishTVCell */,
 				DEE5D95F21A9B95E0057F4F1 /* OwnerRestaurantCell */,
 				DEE5D93A21A8922B0057F4F1 /* RestaurantCell */,
@@ -244,6 +249,15 @@
 			path = DishTVCell;
 			sourceTree = "<group>";
 		};
+		DEE5D96D21A9DC480057F4F1 /* TableCVCell */ = {
+			isa = PBXGroup;
+			children = (
+				DEE5D96E21A9DE590057F4F1 /* TableTVCell.swift */,
+				DEE5D96F21A9DE590057F4F1 /* TableTVCell.xib */,
+			);
+			path = TableCVCell;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -306,6 +320,7 @@
 				DEE5D96C21A9C81C0057F4F1 /* DishTVCell.xib in Resources */,
 				DEE5D91D21A7488E0057F4F1 /* Assets.xcassets in Resources */,
 				DEE5D91B21A7488C0057F4F1 /* Login.storyboard in Resources */,
+				DEE5D97121A9DE590057F4F1 /* TableTVCell.xib in Resources */,
 				DEE5D93E21A892500057F4F1 /* RestaurantCell.xib in Resources */,
 				DEE5D94321A89B850057F4F1 /* Owner.storyboard in Resources */,
 				DEE5D93821A890E10057F4F1 /* Client.storyboard in Resources */,
@@ -324,6 +339,7 @@
 				DEE5D94021A89A760057F4F1 /* UserBaseViewController.swift in Sources */,
 				DEE5D93D21A892500057F4F1 /* RestaurantCell.swift in Sources */,
 				DEE5D93421A88F280057F4F1 /* RoleChoosingVC.swift in Sources */,
+				DEE5D97021A9DE590057F4F1 /* TableTVCell.swift in Sources */,
 				DEE5D96B21A9C81C0057F4F1 /* DishTVCell.swift in Sources */,
 				DEE5D95821A99E680057F4F1 /* ClientNetworkManager.swift in Sources */,
 				DEE5D94A21A8AC110057F4F1 /* RestaurantProfileVC.swift in Sources */,

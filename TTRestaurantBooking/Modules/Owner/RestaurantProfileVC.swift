@@ -33,7 +33,7 @@ class RestaurantProfileVC: UserBaseViewController {
     }
     
     @IBAction func onAddNewTable(_ sender: Any) {
-        
+        showNewTableScreen()
     }
     
     // MARK: - navigation
@@ -48,10 +48,22 @@ class RestaurantProfileVC: UserBaseViewController {
         navigationController?.pushViewController(vc, animated: true)
     }
     
+    private func showNewTableScreen(table: TableModel? = nil) {
+        guard let vc = UIStoryboard(name: "Owner", bundle: nil).instantiateViewController(withIdentifier: "\(CreateTableVC.self)") as? CreateTableVC else { return }
+        vc.delegate = self
+        if let table = table {
+            vc.table = table
+        } else {
+            selectedIndex = nil
+        }
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
     // MARK: - private
     fileprivate func reloadData() {
         dishesTableViewHeight.constant = CGFloat(dishes.count) * cellHeight
         dishesTableView.reloadData()
+        tableTableViewHeight.constant = CGFloat(tables.count) * cellHeight
         tablesTableView.reloadData()
         view.layoutIfNeeded()
     }
@@ -59,6 +71,8 @@ class RestaurantProfileVC: UserBaseViewController {
     private func setupTableView() {
         dishesTableView.register(UINib(nibName: "\(DishTVCell.self)", bundle: nil), forCellReuseIdentifier: "\(DishTVCell.self)")
         dishesTableView.tableFooterView = UIView(frame: .zero)
+        tablesTableView.register(UINib(nibName: "\(TableTVCell.self)", bundle: nil), forCellReuseIdentifier: "\(TableTVCell.self)")
+        tablesTableView.tableFooterView = UIView(frame: .zero)
     }
 }
 
@@ -69,6 +83,18 @@ extension RestaurantProfileVC: CreateDishVCDelegate {
             self.selectedIndex = nil
         } else {
             dishes.append(dish)
+        }
+        reloadData()
+    }
+}
+
+extension RestaurantProfileVC: CreateTableDelegate {
+    func createTable(table: TableModel) {
+        if let selectedIndex = selectedIndex {
+            tables[selectedIndex] = table
+            self.selectedIndex = nil
+        } else {
+            tables.append(table)
         }
         reloadData()
     }
@@ -88,7 +114,9 @@ extension RestaurantProfileVC: UITableViewDataSource, UITableViewDelegate {
             cell.dish = dishes[indexPath.row]
             return cell
         }
-        return UITableViewCell()
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "\(TableTVCell.self)") as? TableTVCell else { return UITableViewCell() }
+        cell.table = tables[indexPath.row]
+        return cell
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
@@ -103,9 +131,11 @@ extension RestaurantProfileVC: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selectedIndex = indexPath.row
         if tableView == dishesTableView {
-            selectedIndex = indexPath.row
             showNewDishScreen(dish: dishes[indexPath.row])
+        } else {
+            showNewTableScreen(table: tables[indexPath.row])
         }
     }
 }

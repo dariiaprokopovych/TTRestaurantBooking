@@ -10,4 +10,5 @@ import UIKit
 
 class TableModel {
 
+    var amountOfClients: Int = 2
 }

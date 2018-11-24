@@ -15,16 +15,19 @@ class RoleChoosingVC: UIViewController {
 
         // Do any additional setup after loading the view.
     }
-    
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    // MARK: - actions
+    @IBAction func onClientAction(_ sender: Any) {
+        showRegistrationVC(role: .client)
     }
-    */
-
+    
+    @IBAction func onOwnerAction(_ sender: Any) {
+        showRegistrationVC(role: .owner)
+    }
+    
+    private func showRegistrationVC(role: Role) {
+        guard let vc = UIStoryboard(name: "Login", bundle: nil).instantiateViewController(withIdentifier: "\(RegistrationVC.self)") as? RegistrationVC else { return }
+        vc.role = role
+        navigationController?.pushViewController(vc, animated: true)
+    }
 }

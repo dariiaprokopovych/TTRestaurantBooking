@@ -10,6 +10,8 @@ import UIKit
 
 class RestaurantListVC: UserBaseViewController {
 
+    var restaurants: [Restaurant] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

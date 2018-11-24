@@ -53,7 +53,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="ngG-TB-IyS">
                                         <rect key="frame" x="0.0" y="0.0" width="315" height="29"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2 people" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nmX-mF-ikd">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2 persons" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nmX-mF-ikd">
                                                 <rect key="frame" x="0.0" y="0.0" width="191" height="29"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
@@ -65,6 +65,9 @@
                                                     <constraint firstAttribute="width" constant="94" id="xBT-6N-LoT"/>
                                                 </constraints>
                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <connections>
+                                                    <action selector="peopleAmountValueChanged:" destination="yuM-3I-1bm" eventType="valueChanged" id="7Kn-mi-7hV"/>
+                                                </connections>
                                             </stepper>
                                         </subviews>
                                     </stackView>
@@ -98,6 +101,9 @@
                                 <state key="normal" title="Search reastaurants">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="onSearch:" destination="yuM-3I-1bm" eventType="touchUpInside" id="Sdl-fx-A9O"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.93074501970000001" green="0.98052901029999995" blue="0.73984363600000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -116,6 +122,10 @@
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
+                        <outlet property="dateTextField" destination="ZM5-aF-wsq" id="eKH-Ds-Wi9"/>
+                        <outlet property="fromHoursTextField" destination="dDg-4U-lVz" id="lqF-Lk-4Gm"/>
+                        <outlet property="personsAmountLabel" destination="nmX-mF-ikd" id="h9W-Ga-slc"/>
+                        <outlet property="toHoursTextField" destination="eO5-ff-1Jm" id="nXY-M4-Hof"/>
                         <segue destination="6Pb-Zm-BaU" kind="show" id="YFa-PJ-iez"/>
                     </connections>
                 </viewController>

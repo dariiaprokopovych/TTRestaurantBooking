@@ -25,6 +25,7 @@ class RoleChoosingVC: UIViewController {
         showRegistrationVC(role: .owner)
     }
     
+    // MARK: - private
     private func showRegistrationVC(role: Role) {
         guard let vc = UIStoryboard(name: "Login", bundle: nil).instantiateViewController(withIdentifier: "\(RegistrationVC.self)") as? RegistrationVC else { return }
         vc.role = role

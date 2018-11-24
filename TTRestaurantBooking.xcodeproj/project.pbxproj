@@ -30,6 +30,9 @@
 		DEE5D95021A94C2B0057F4F1 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE5D94F21A94C2B0057F4F1 /* BaseViewController.swift */; };
 		DEE5D95321A951FB0057F4F1 /* LoginNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE5D95221A951FB0057F4F1 /* LoginNetworkManager.swift */; };
 		DEE5D95621A954AC0057F4F1 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE5D95521A954AC0057F4F1 /* UserModel.swift */; };
+		DEE5D95821A99E680057F4F1 /* ClientNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE5D95721A99E680057F4F1 /* ClientNetworkManager.swift */; };
+		DEE5D95A21A9A2A60057F4F1 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE5D95921A9A2A60057F4F1 /* Date+Extensions.swift */; };
+		DEE5D95C21A9A5BD0057F4F1 /* RestaurantModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE5D95B21A9A5BD0057F4F1 /* RestaurantModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +61,9 @@
 		DEE5D94F21A94C2B0057F4F1 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		DEE5D95221A951FB0057F4F1 /* LoginNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginNetworkManager.swift; sourceTree = "<group>"; };
 		DEE5D95521A954AC0057F4F1 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		DEE5D95721A99E680057F4F1 /* ClientNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientNetworkManager.swift; sourceTree = "<group>"; };
+		DEE5D95921A9A2A60057F4F1 /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
+		DEE5D95B21A9A5BD0057F4F1 /* RestaurantModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				DEE5D92B21A889330057F4F1 /* UIColor+Extensions.swift */,
+				DEE5D95921A9A2A60057F4F1 /* Date+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -186,6 +193,7 @@
 			isa = PBXGroup;
 			children = (
 				DEE5D95221A951FB0057F4F1 /* LoginNetworkManager.swift */,
+				DEE5D95721A99E680057F4F1 /* ClientNetworkManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -194,6 +202,7 @@
 			isa = PBXGroup;
 			children = (
 				DEE5D95521A954AC0057F4F1 /* UserModel.swift */,
+				DEE5D95B21A9A5BD0057F4F1 /* RestaurantModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -275,15 +284,18 @@
 				DEE5D94021A89A760057F4F1 /* UserBaseViewController.swift in Sources */,
 				DEE5D93D21A892500057F4F1 /* RestaurantCell.swift in Sources */,
 				DEE5D93421A88F280057F4F1 /* RoleChoosingVC.swift in Sources */,
+				DEE5D95821A99E680057F4F1 /* ClientNetworkManager.swift in Sources */,
 				DEE5D94A21A8AC110057F4F1 /* RestaurantProfileVC.swift in Sources */,
 				DEE5D95321A951FB0057F4F1 /* LoginNetworkManager.swift in Sources */,
 				DEE5D94621A8AB690057F4F1 /* SearchRestaurantVC.swift in Sources */,
 				DEE5D95021A94C2B0057F4F1 /* BaseViewController.swift in Sources */,
 				DEE5D91821A7488C0057F4F1 /* ViewController.swift in Sources */,
+				DEE5D95A21A9A2A60057F4F1 /* Date+Extensions.swift in Sources */,
 				DEE5D95621A954AC0057F4F1 /* UserModel.swift in Sources */,
 				DEE5D93621A890AA0057F4F1 /* RestaurantListVC.swift in Sources */,
 				DEE5D92C21A889330057F4F1 /* UIColor+Extensions.swift in Sources */,
 				DEE5D94E21A8AC620057F4F1 /* CreateDishVC.swift in Sources */,
+				DEE5D95C21A9A5BD0057F4F1 /* RestaurantModel.swift in Sources */,
 				DEE5D93021A88F000057F4F1 /* LoginVC.swift in Sources */,
 				DEE5D94821A8ABD00057F4F1 /* OwnerRestaurantsListVC.swift in Sources */,
 				DEE5D93221A88F130057F4F1 /* RegistrationVC.swift in Sources */,

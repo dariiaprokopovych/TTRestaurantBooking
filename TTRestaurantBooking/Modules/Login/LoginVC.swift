@@ -34,6 +34,19 @@ class LoginVC: BaseViewController {
                 self.showErrorAlert(message: error?.localizedDescription)
                 return
             }
+            self.goNext(for: userModel)
         }
+    }
+    
+    // MARK: - private
+    private func goNext(for user: UserModel) {
+        let vc: UIViewController
+        switch user.role {
+        case .owner:
+            vc = UIStoryboard(name: "Owner", bundle: nil).instantiateInitialViewController()!
+        case .client:
+            vc = UIStoryboard(name: "Client", bundle: nil).instantiateInitialViewController()!
+        }
+        navigationController?.pushViewController(vc, animated: true)
     }
 }

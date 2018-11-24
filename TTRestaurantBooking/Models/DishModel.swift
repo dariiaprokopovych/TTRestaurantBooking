@@ -9,6 +9,6 @@
 import UIKit
 
 class DishModel {
-    var name: String = ""
-    var price: Int = 100
+    var name: String = "Carbonara"
+    var price: Int = 150
 }

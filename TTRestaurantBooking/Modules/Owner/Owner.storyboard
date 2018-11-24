@@ -63,7 +63,7 @@
         <!--New restaurant-->
         <scene sceneID="L3B-Pv-K3Y">
             <objects>
-                <viewController id="gCF-Tx-Y83" customClass="RestaurantProfileVC" customModule="TTRestaurantBooking" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RestaurantProfileVC" id="gCF-Tx-Y83" customClass="RestaurantProfileVC" customModule="TTRestaurantBooking" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="a8k-Te-FPc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -72,10 +72,10 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rio-v7-ehH">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="707"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="717"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="QqA-RY-x74">
-                                                <rect key="frame" x="30" y="80" width="315" height="537"/>
+                                                <rect key="frame" x="30" y="80" width="315" height="547"/>
                                                 <subviews>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9RB-a3-54i">
                                                         <rect key="frame" x="0.0" y="0.0" width="315" height="30"/>
@@ -134,8 +134,8 @@
                                                         </subviews>
                                                         <color key="tintColor" red="0.93074501970000001" green="0.98052901029999995" blue="0.73984363600000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     </stackView>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="qYa-6C-ZD7">
-                                                        <rect key="frame" x="0.0" y="358.5" width="315" height="178.5"/>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="qYa-6C-ZD7">
+                                                        <rect key="frame" x="0.0" y="358.5" width="315" height="188.5"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tables" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jrj-JF-Hwb">
                                                                 <rect key="frame" x="0.0" y="0.0" width="315" height="20.5"/>
@@ -148,7 +148,7 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="p82-Di-dce">
-                                                                <rect key="frame" x="0.0" y="20.5" width="315" height="128"/>
+                                                                <rect key="frame" x="0.0" y="25.5" width="315" height="128"/>
                                                                 <color key="backgroundColor" red="0.93074501970000001" green="0.98052901029999995" blue="0.73984363600000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="128" id="htd-yC-LNs"/>
@@ -159,7 +159,7 @@
                                                                 </connections>
                                                             </tableView>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dEO-MP-hId">
-                                                                <rect key="frame" x="0.0" y="148.5" width="315" height="30"/>
+                                                                <rect key="frame" x="0.0" y="158.5" width="315" height="30"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="30" id="M9h-2H-NY0"/>
                                                                 </constraints>
@@ -176,7 +176,7 @@
                                                 </subviews>
                                             </stackView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u8R-zH-faI">
-                                                <rect key="frame" x="30" y="627" width="315" height="50"/>
+                                                <rect key="frame" x="30" y="637" width="315" height="50"/>
                                                 <color key="backgroundColor" red="0.93074501970000001" green="0.98052901029999995" blue="0.73984363600000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="PuR-43-9e7"/>
@@ -185,6 +185,9 @@
                                                 <state key="normal" title="Save">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="onSave:" destination="gCF-Tx-Y83" eventType="touchUpInside" id="a94-23-bOS"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" red="0.70691908950000004" green="0.81327551600000003" blue="0.74606460409999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -224,8 +227,11 @@
                     <connections>
                         <outlet property="dishesTableView" destination="1dg-XY-haZ" id="Jcb-gX-rXM"/>
                         <outlet property="dishesTableViewHeight" destination="S3m-aE-8f6" id="WPr-Zl-0As"/>
+                        <outlet property="nameTextField" destination="9RB-a3-54i" id="fgb-VJ-lAA"/>
                         <outlet property="tableTableViewHeight" destination="htd-yC-LNs" id="cSp-AM-Tc7"/>
                         <outlet property="tablesTableView" destination="p82-Di-dce" id="a3n-lv-emV"/>
+                        <outlet property="workFromTextField" destination="sqW-xh-gmX" id="CPH-Ml-mHd"/>
+                        <outlet property="workToTextField" destination="oTl-N4-9qv" id="lu2-kI-Rhq"/>
                         <segue destination="rRf-ob-zP7" kind="show" id="83i-3P-eAn"/>
                     </connections>
                 </viewController>

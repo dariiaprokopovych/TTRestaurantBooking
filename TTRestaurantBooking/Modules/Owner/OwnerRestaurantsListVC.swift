@@ -37,10 +37,17 @@ class OwnerRestaurantsListVC: UserBaseViewController {
         tableView.tableFooterView = UIView(frame: .zero)
         tableView.register(UINib(nibName: "\(OwnerRestaurantCell.self)", bundle: nil), forCellReuseIdentifier: "\(OwnerRestaurantCell.self)")
         tableView.dataSource = self
+        tableView.delegate = self
+    }
+    
+    fileprivate func showRestaurantProfile(restaurant: Restaurant) {
+        guard let vc = UIStoryboard(name: "Owner", bundle: nil).instantiateViewController(withIdentifier: "\(RestaurantProfileVC.self)") as? RestaurantProfileVC else { return }
+        vc.restaurant = restaurant
+        navigationController?.pushViewController(vc, animated: true)
     }
 }
 
-extension OwnerRestaurantsListVC: UITableViewDataSource {
+extension OwnerRestaurantsListVC: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return restaurants.count
     }
@@ -53,5 +60,7 @@ extension OwnerRestaurantsListVC: UITableViewDataSource {
         return cell
     }
     
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        showRestaurantProfile(restaurant: restaurants[indexPath.row])
+    }
 }

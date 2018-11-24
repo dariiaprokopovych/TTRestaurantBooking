@@ -9,31 +9,60 @@
 import UIKit
 
 class RestaurantProfileVC: UserBaseViewController {
-
+    
     @IBOutlet weak var dishesTableView: UITableView!
     @IBOutlet weak var tablesTableView: UITableView!
     @IBOutlet weak var tableTableViewHeight: NSLayoutConstraint!
     @IBOutlet weak var dishesTableViewHeight: NSLayoutConstraint!
+    @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var workFromTextField: UITextField!
+    @IBOutlet weak var workToTextField: UITextField!
     
     private let cellHeight: CGFloat = 44.0
     private var dishes: [DishModel] = []
     private var tables: [TableModel] = []
     private var selectedIndex: Int?
+    private let fromHoursPicker: UIDatePicker = UIDatePicker()
+    private let toHoursPicker: UIDatePicker = UIDatePicker()
+    var restaurant: Restaurant?
     
     // MARK: - lige cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
+        setupTextFields()
+        seupRestaurantUI()
         reloadData()
     }
-
+    
     // MARK: - actions
+    @IBAction func onSave(_ sender: Any) {
+        guard let name = nameTextField.text, name.count > 0,
+            dishes.count > 0, tables.count > 0,
+            (workFromTextField.text?.count ?? 0) > 0,
+            (workToTextField.text?.count ?? 0) > 0 else {
+                showErrorAlert(message: "Please fill all required data")
+                return
+        }
+    }
+    
     @IBAction func onAddNewDish(_ sender: Any) {
         showNewDishScreen()
     }
     
     @IBAction func onAddNewTable(_ sender: Any) {
         showNewTableScreen()
+    }
+    
+    @objc func pickerChange(picker: UIDatePicker) {
+        switch picker {
+        case fromHoursPicker:
+            workFromTextField.text = picker.date.stringWithFormat(format: .time)
+        case toHoursPicker:
+            workToTextField.text = picker.date.stringWithFormat(format: .time)
+        default:
+            break;
+        }
     }
     
     // MARK: - navigation
@@ -60,6 +89,16 @@ class RestaurantProfileVC: UserBaseViewController {
     }
     
     // MARK: - private
+    private func seupRestaurantUI() {
+        guard let restaurant = restaurant else { return }
+        nameTextField.text = restaurant.name
+        workToTextField.text = restaurant.workTill.stringWithFormat(format: .time)
+        workFromTextField.text = restaurant.workFrom.stringWithFormat(format: .time)
+        dishes = restaurant.dishes
+        tables = restaurant.tables
+        reloadData()
+    }
+    
     fileprivate func reloadData() {
         dishesTableViewHeight.constant = CGFloat(dishes.count) * cellHeight
         dishesTableView.reloadData()
@@ -73,6 +112,15 @@ class RestaurantProfileVC: UserBaseViewController {
         dishesTableView.tableFooterView = UIView(frame: .zero)
         tablesTableView.register(UINib(nibName: "\(TableTVCell.self)", bundle: nil), forCellReuseIdentifier: "\(TableTVCell.self)")
         tablesTableView.tableFooterView = UIView(frame: .zero)
+    }
+    
+    private func setupTextFields() {
+        fromHoursPicker.addTarget(self, action: #selector(pickerChange(picker:)), for: .valueChanged)
+        toHoursPicker.addTarget(self, action: #selector(pickerChange(picker:)), for: .valueChanged)
+        fromHoursPicker.datePickerMode = .time
+        toHoursPicker.datePickerMode = .time
+        workToTextField.inputView = toHoursPicker
+        workFromTextField.inputView = fromHoursPicker
     }
 }
 

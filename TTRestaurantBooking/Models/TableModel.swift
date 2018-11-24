@@ -10,5 +10,5 @@ import UIKit
 
 class TableModel {
 
-    var amountOfClients: Int = 2
+    var amountOfClients: Int = 3
 }

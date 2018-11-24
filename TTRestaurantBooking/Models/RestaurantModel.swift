@@ -10,4 +10,8 @@ import Foundation
 
 class Restaurant {
     var name: String = "wdwdw"
+    var workFrom: Date = Date()
+    var workTill: Date = Date()
+    var dishes: [DishModel] = [DishModel(), DishModel()]
+    var tables: [TableModel] = [TableModel(), TableModel(), TableModel()]
 }

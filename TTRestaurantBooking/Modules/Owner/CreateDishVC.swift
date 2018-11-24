@@ -8,23 +8,51 @@
 
 import UIKit
 
-class CreateDishVC: UIViewController {
+protocol CreateDishVCDelegate: class {
+    func createDish(dish: DishModel)
+}
 
+class CreateDishVC: UserBaseViewController {
+
+    @IBOutlet private weak var nameTextField: UITextField!
+    @IBOutlet private weak var priceLabel: UILabel!
+    @IBOutlet private weak var priceStepper: UIStepper!
+    
+    var dish: DishModel?
+    
+    weak var delegate: CreateDishVCDelegate?
+    private var price: Int = 100
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupUI()
+    }
 
-        // Do any additional setup after loading the view.
+    // MARK: - actions
+    @IBAction func onPriceStepper(_ sender: UIStepper) {
+        price = Int(sender.value)
+        priceLabel.text = "\(price) uah"
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func onSave(_ sender: Any) {
+        guard let name = nameTextField.text, name.count > 0 else {
+            return
+        }
+        if dish == nil {
+            dish = DishModel()
+        }
+        dish!.name = name
+        dish!.price = price
+        delegate?.createDish(dish: dish!)
+        navigationController?.popViewController(animated: true)
     }
-    */
-
+    
+    // MARK: - private
+    func setupUI() {
+        guard let dish = dish else { return }
+        nameTextField.text = dish.name
+        price = dish.price
+        priceStepper.value = Double(dish.price)
+        priceLabel.text = "\(price) uah"
+    }
 }

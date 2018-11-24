@@ -52,6 +52,9 @@
                         <barButtonItem key="rightBarButtonItem" title="Log Out" id="0yR-wy-s3i"/>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <connections>
+                        <outlet property="tableView" destination="w2G-1O-fa3" id="o96-VA-r2Y"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uLR-ec-qMo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -69,10 +72,10 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rio-v7-ehH">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="707"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="QqA-RY-x74">
-                                                <rect key="frame" x="30" y="80" width="315" height="276"/>
+                                                <rect key="frame" x="30" y="80" width="315" height="537"/>
                                                 <subviews>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9RB-a3-54i">
                                                         <rect key="frame" x="0.0" y="0.0" width="315" height="30"/>
@@ -93,7 +96,7 @@
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="0AN-Qq-9oN">
-                                                        <rect key="frame" x="0.0" y="150" width="315" height="55.5"/>
+                                                        <rect key="frame" x="0.0" y="150" width="315" height="188.5"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dishes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="45s-Md-eJ4">
                                                                 <rect key="frame" x="0.0" y="0.0" width="315" height="20.5"/>
@@ -105,20 +108,34 @@
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
+                                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1dg-XY-haZ">
+                                                                <rect key="frame" x="0.0" y="25.5" width="315" height="128"/>
+                                                                <color key="backgroundColor" red="0.93074501970000001" green="0.98052901029999995" blue="0.73984363600000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="128" id="S3m-aE-8f6"/>
+                                                                </constraints>
+                                                                <connections>
+                                                                    <outlet property="dataSource" destination="gCF-Tx-Y83" id="VmV-YZ-Zd1"/>
+                                                                    <outlet property="delegate" destination="gCF-Tx-Y83" id="7sq-Gp-ThW"/>
+                                                                </connections>
+                                                            </tableView>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ey9-KB-6Tn">
-                                                                <rect key="frame" x="0.0" y="25.5" width="315" height="30"/>
+                                                                <rect key="frame" x="0.0" y="158.5" width="315" height="30"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="30" id="wwL-97-vVz"/>
                                                                 </constraints>
                                                                 <state key="normal" title="Add New">
                                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </state>
+                                                                <connections>
+                                                                    <action selector="onAddNewDish:" destination="gCF-Tx-Y83" eventType="touchUpInside" id="iag-AG-zgr"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                         <color key="tintColor" red="0.93074501970000001" green="0.98052901029999995" blue="0.73984363600000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="qYa-6C-ZD7">
-                                                        <rect key="frame" x="0.0" y="225.5" width="315" height="50.5"/>
+                                                        <rect key="frame" x="0.0" y="358.5" width="315" height="178.5"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tables" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jrj-JF-Hwb">
                                                                 <rect key="frame" x="0.0" y="0.0" width="315" height="20.5"/>
@@ -130,14 +147,28 @@
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
+                                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="p82-Di-dce">
+                                                                <rect key="frame" x="0.0" y="20.5" width="315" height="128"/>
+                                                                <color key="backgroundColor" red="0.93074501970000001" green="0.98052901029999995" blue="0.73984363600000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="128" id="htd-yC-LNs"/>
+                                                                </constraints>
+                                                                <connections>
+                                                                    <outlet property="dataSource" destination="gCF-Tx-Y83" id="9xT-s2-jwU"/>
+                                                                    <outlet property="delegate" destination="gCF-Tx-Y83" id="nEo-tL-tbj"/>
+                                                                </connections>
+                                                            </tableView>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dEO-MP-hId">
-                                                                <rect key="frame" x="0.0" y="20.5" width="315" height="30"/>
+                                                                <rect key="frame" x="0.0" y="148.5" width="315" height="30"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="30" id="M9h-2H-NY0"/>
                                                                 </constraints>
                                                                 <state key="normal" title="Add New">
                                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </state>
+                                                                <connections>
+                                                                    <action selector="onAddNewTable:" destination="gCF-Tx-Y83" eventType="touchUpInside" id="Sqk-O5-eNd"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                         <color key="tintColor" red="0.93074501970000001" green="0.98052901029999995" blue="0.73984363600000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -145,7 +176,7 @@
                                                 </subviews>
                                             </stackView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u8R-zH-faI">
-                                                <rect key="frame" x="30" y="523" width="315" height="50"/>
+                                                <rect key="frame" x="30" y="627" width="315" height="50"/>
                                                 <color key="backgroundColor" red="0.93074501970000001" green="0.98052901029999995" blue="0.73984363600000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="PuR-43-9e7"/>
@@ -162,6 +193,7 @@
                                             <constraint firstAttribute="trailing" secondItem="u8R-zH-faI" secondAttribute="trailing" constant="30" id="9pI-Sf-jtw"/>
                                             <constraint firstItem="QqA-RY-x74" firstAttribute="centerX" secondItem="rio-v7-ehH" secondAttribute="centerX" id="DVP-Hw-ops"/>
                                             <constraint firstAttribute="bottom" secondItem="u8R-zH-faI" secondAttribute="bottom" constant="30" id="MTw-rl-3Pf"/>
+                                            <constraint firstItem="u8R-zH-faI" firstAttribute="top" secondItem="QqA-RY-x74" secondAttribute="bottom" constant="10" id="UzL-AD-ahu"/>
                                             <constraint firstItem="QqA-RY-x74" firstAttribute="leading" secondItem="rio-v7-ehH" secondAttribute="leading" constant="30" id="Y5h-Hn-6lO"/>
                                             <constraint firstItem="u8R-zH-faI" firstAttribute="centerX" secondItem="rio-v7-ehH" secondAttribute="centerX" id="wXz-IG-fAd"/>
                                         </constraints>
@@ -183,7 +215,6 @@
                             <constraint firstItem="ea8-E2-vij" firstAttribute="trailing" secondItem="Cji-MO-OPg" secondAttribute="trailing" id="bke-3Z-aZ6"/>
                             <constraint firstItem="Cji-MO-OPg" firstAttribute="top" secondItem="ea8-E2-vij" secondAttribute="top" id="ecp-rR-VtC"/>
                             <constraint firstItem="Cji-MO-OPg" firstAttribute="width" secondItem="a8k-Te-FPc" secondAttribute="width" id="lAI-T7-uw2"/>
-                            <constraint firstItem="rio-v7-ehH" firstAttribute="height" secondItem="a8k-Te-FPc" secondAttribute="height" id="omW-rd-FXQ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ea8-E2-vij"/>
                     </view>
@@ -191,6 +222,10 @@
                         <barButtonItem key="rightBarButtonItem" title="Log Out" id="6aE-d1-zIw"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="dishesTableView" destination="1dg-XY-haZ" id="Jcb-gX-rXM"/>
+                        <outlet property="dishesTableViewHeight" destination="S3m-aE-8f6" id="WPr-Zl-0As"/>
+                        <outlet property="tableTableViewHeight" destination="htd-yC-LNs" id="cSp-AM-Tc7"/>
+                        <outlet property="tablesTableView" destination="p82-Di-dce" id="a3n-lv-emV"/>
                         <segue destination="rRf-ob-zP7" kind="show" id="83i-3P-eAn"/>
                     </connections>
                 </viewController>
@@ -281,7 +316,7 @@
         <!--New DIsh-->
         <scene sceneID="fSX-7A-h4C">
             <objects>
-                <viewController id="cuB-bk-tO1" customClass="CreateDishVC" customModule="TTRestaurantBooking" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CreateDishVC" id="cuB-bk-tO1" customClass="CreateDishVC" customModule="TTRestaurantBooking" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xQN-aW-8UK">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -296,6 +331,9 @@
                                 <state key="normal" title="Save">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="onSave:" destination="cuB-bk-tO1" eventType="touchUpInside" id="Nij-it-aU9"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="MFN-UV-Jck">
                                 <rect key="frame" x="30" y="80" width="315" height="89"/>
@@ -321,6 +359,9 @@
                                                     <constraint firstAttribute="width" constant="94" id="vB2-jn-Sj5"/>
                                                 </constraints>
                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <connections>
+                                                    <action selector="onPriceStepper:" destination="cuB-bk-tO1" eventType="valueChanged" id="1US-42-GUI"/>
+                                                </connections>
                                             </stepper>
                                         </subviews>
                                     </stackView>
@@ -342,6 +383,11 @@
                         <barButtonItem key="rightBarButtonItem" title="Log Out" id="Ekp-S7-qje"/>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <connections>
+                        <outlet property="nameTextField" destination="fNK-DR-3Xn" id="Iou-ge-TUR"/>
+                        <outlet property="priceLabel" destination="h4R-tS-EJB" id="1Nl-99-CE7"/>
+                        <outlet property="priceStepper" destination="N5d-H4-60l" id="1Wu-fT-jCE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uls-3z-TJ5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

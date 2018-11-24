@@ -14,7 +14,9 @@ typealias EmptyCompletion = ( _ isSuccess: Bool, _ error: Error?) -> ()
 class LoginNetworkManager {
 
     static func login(email: String, password: String, completion: @escaping Completion) {
-        
+        let mockUser = UserModel()
+        mockUser.role = .owner
+        completion(true, nil, mockUser)
     }
     
     static func register(role: Role, email: String, password: String, name: String, age: Int, sex: Sex, completion: @escaping Completion) {

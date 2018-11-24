@@ -47,6 +47,9 @@ class LoginVC: BaseViewController {
         case .client:
             vc = UIStoryboard(name: "Client", bundle: nil).instantiateInitialViewController()!
         }
-        navigationController?.pushViewController(vc, animated: true)
+        if let _vc = vc as? UserBaseViewController {
+            _vc.user = user
+            navigationController?.pushViewController(_vc, animated: true)
+        }
     }
 }

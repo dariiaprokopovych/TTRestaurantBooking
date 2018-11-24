@@ -33,6 +33,13 @@
 		DEE5D95821A99E680057F4F1 /* ClientNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE5D95721A99E680057F4F1 /* ClientNetworkManager.swift */; };
 		DEE5D95A21A9A2A60057F4F1 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE5D95921A9A2A60057F4F1 /* Date+Extensions.swift */; };
 		DEE5D95C21A9A5BD0057F4F1 /* RestaurantModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE5D95B21A9A5BD0057F4F1 /* RestaurantModel.swift */; };
+		DEE5D95E21A9B8F40057F4F1 /* OwnerNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE5D95D21A9B8F40057F4F1 /* OwnerNetworkManager.swift */; };
+		DEE5D96221A9B9880057F4F1 /* OwnerRestaurantCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE5D96021A9B9880057F4F1 /* OwnerRestaurantCell.swift */; };
+		DEE5D96321A9B9880057F4F1 /* OwnerRestaurantCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEE5D96121A9B9880057F4F1 /* OwnerRestaurantCell.xib */; };
+		DEE5D96521A9C24D0057F4F1 /* DishModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE5D96421A9C24D0057F4F1 /* DishModel.swift */; };
+		DEE5D96821A9C75E0057F4F1 /* TableModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE5D96721A9C75E0057F4F1 /* TableModel.swift */; };
+		DEE5D96B21A9C81C0057F4F1 /* DishTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE5D96921A9C81C0057F4F1 /* DishTVCell.swift */; };
+		DEE5D96C21A9C81C0057F4F1 /* DishTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEE5D96A21A9C81C0057F4F1 /* DishTVCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +71,13 @@
 		DEE5D95721A99E680057F4F1 /* ClientNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientNetworkManager.swift; sourceTree = "<group>"; };
 		DEE5D95921A9A2A60057F4F1 /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
 		DEE5D95B21A9A5BD0057F4F1 /* RestaurantModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantModel.swift; sourceTree = "<group>"; };
+		DEE5D95D21A9B8F40057F4F1 /* OwnerNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnerNetworkManager.swift; sourceTree = "<group>"; };
+		DEE5D96021A9B9880057F4F1 /* OwnerRestaurantCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnerRestaurantCell.swift; sourceTree = "<group>"; };
+		DEE5D96121A9B9880057F4F1 /* OwnerRestaurantCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OwnerRestaurantCell.xib; sourceTree = "<group>"; };
+		DEE5D96421A9C24D0057F4F1 /* DishModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishModel.swift; sourceTree = "<group>"; };
+		DEE5D96721A9C75E0057F4F1 /* TableModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableModel.swift; sourceTree = "<group>"; };
+		DEE5D96921A9C81C0057F4F1 /* DishTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishTVCell.swift; sourceTree = "<group>"; };
+		DEE5D96A21A9C81C0057F4F1 /* DishTVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DishTVCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +168,8 @@
 		DEE5D93921A8920F0057F4F1 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				DEE5D96621A9C5A00057F4F1 /* DishTVCell */,
+				DEE5D95F21A9B95E0057F4F1 /* OwnerRestaurantCell */,
 				DEE5D93A21A8922B0057F4F1 /* RestaurantCell */,
 			);
 			path = Views;
@@ -194,6 +210,7 @@
 			children = (
 				DEE5D95221A951FB0057F4F1 /* LoginNetworkManager.swift */,
 				DEE5D95721A99E680057F4F1 /* ClientNetworkManager.swift */,
+				DEE5D95D21A9B8F40057F4F1 /* OwnerNetworkManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -203,8 +220,28 @@
 			children = (
 				DEE5D95521A954AC0057F4F1 /* UserModel.swift */,
 				DEE5D95B21A9A5BD0057F4F1 /* RestaurantModel.swift */,
+				DEE5D96421A9C24D0057F4F1 /* DishModel.swift */,
+				DEE5D96721A9C75E0057F4F1 /* TableModel.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		DEE5D95F21A9B95E0057F4F1 /* OwnerRestaurantCell */ = {
+			isa = PBXGroup;
+			children = (
+				DEE5D96021A9B9880057F4F1 /* OwnerRestaurantCell.swift */,
+				DEE5D96121A9B9880057F4F1 /* OwnerRestaurantCell.xib */,
+			);
+			path = OwnerRestaurantCell;
+			sourceTree = "<group>";
+		};
+		DEE5D96621A9C5A00057F4F1 /* DishTVCell */ = {
+			isa = PBXGroup;
+			children = (
+				DEE5D96921A9C81C0057F4F1 /* DishTVCell.swift */,
+				DEE5D96A21A9C81C0057F4F1 /* DishTVCell.xib */,
+			);
+			path = DishTVCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -266,11 +303,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				DEE5D92021A7488E0057F4F1 /* LaunchScreen.storyboard in Resources */,
+				DEE5D96C21A9C81C0057F4F1 /* DishTVCell.xib in Resources */,
 				DEE5D91D21A7488E0057F4F1 /* Assets.xcassets in Resources */,
 				DEE5D91B21A7488C0057F4F1 /* Login.storyboard in Resources */,
 				DEE5D93E21A892500057F4F1 /* RestaurantCell.xib in Resources */,
 				DEE5D94321A89B850057F4F1 /* Owner.storyboard in Resources */,
 				DEE5D93821A890E10057F4F1 /* Client.storyboard in Resources */,
+				DEE5D96321A9B9880057F4F1 /* OwnerRestaurantCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,23 +320,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DEE5D96521A9C24D0057F4F1 /* DishModel.swift in Sources */,
 				DEE5D94021A89A760057F4F1 /* UserBaseViewController.swift in Sources */,
 				DEE5D93D21A892500057F4F1 /* RestaurantCell.swift in Sources */,
 				DEE5D93421A88F280057F4F1 /* RoleChoosingVC.swift in Sources */,
+				DEE5D96B21A9C81C0057F4F1 /* DishTVCell.swift in Sources */,
 				DEE5D95821A99E680057F4F1 /* ClientNetworkManager.swift in Sources */,
 				DEE5D94A21A8AC110057F4F1 /* RestaurantProfileVC.swift in Sources */,
 				DEE5D95321A951FB0057F4F1 /* LoginNetworkManager.swift in Sources */,
 				DEE5D94621A8AB690057F4F1 /* SearchRestaurantVC.swift in Sources */,
 				DEE5D95021A94C2B0057F4F1 /* BaseViewController.swift in Sources */,
 				DEE5D91821A7488C0057F4F1 /* ViewController.swift in Sources */,
+				DEE5D95E21A9B8F40057F4F1 /* OwnerNetworkManager.swift in Sources */,
 				DEE5D95A21A9A2A60057F4F1 /* Date+Extensions.swift in Sources */,
 				DEE5D95621A954AC0057F4F1 /* UserModel.swift in Sources */,
+				DEE5D96221A9B9880057F4F1 /* OwnerRestaurantCell.swift in Sources */,
 				DEE5D93621A890AA0057F4F1 /* RestaurantListVC.swift in Sources */,
 				DEE5D92C21A889330057F4F1 /* UIColor+Extensions.swift in Sources */,
 				DEE5D94E21A8AC620057F4F1 /* CreateDishVC.swift in Sources */,
 				DEE5D95C21A9A5BD0057F4F1 /* RestaurantModel.swift in Sources */,
 				DEE5D93021A88F000057F4F1 /* LoginVC.swift in Sources */,
 				DEE5D94821A8ABD00057F4F1 /* OwnerRestaurantsListVC.swift in Sources */,
+				DEE5D96821A9C75E0057F4F1 /* TableModel.swift in Sources */,
 				DEE5D93221A88F130057F4F1 /* RegistrationVC.swift in Sources */,
 				DEE5D91621A7488C0057F4F1 /* AppDelegate.swift in Sources */,
 				DEE5D94C21A8AC480057F4F1 /* CreateTableVC.swift in Sources */,

@@ -8,23 +8,50 @@
 
 import UIKit
 
-class OwnerRestaurantsListVC: UIViewController {
+class OwnerRestaurantsListVC: UserBaseViewController {
+    
+    @IBOutlet weak var tableView: UITableView!
+    
+    var restaurants: [Restaurant] = []
 
+    // MARK: - life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupTableView()
+        loadData()
+    }
 
-        // Do any additional setup after loading the view.
+    // MARK: - private
+    private func loadData() {
+        OwnerNetworkManager.getRestaurants(user: user) { isSuccess, error, data in 
+            guard isSuccess, let restaurants = data as? [Restaurant] else {
+                self.showErrorAlert(message: error?.localizedDescription)
+                return
+            }
+            self.restaurants = restaurants
+            self.tableView.reloadData()
+        }
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    private func setupTableView() {
+        tableView.tableFooterView = UIView(frame: .zero)
+        tableView.register(UINib(nibName: "\(OwnerRestaurantCell.self)", bundle: nil), forCellReuseIdentifier: "\(OwnerRestaurantCell.self)")
+        tableView.dataSource = self
     }
-    */
+}
 
+extension OwnerRestaurantsListVC: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return restaurants.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "\(OwnerRestaurantCell.self)") as? OwnerRestaurantCell else {
+            return UITableViewCell()
+        }
+        cell.restaurant = restaurants[indexPath.row]
+        return cell
+    }
+    
+    
 }

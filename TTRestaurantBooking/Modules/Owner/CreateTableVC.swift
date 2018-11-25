@@ -12,7 +12,7 @@ protocol CreateTableDelegate: class {
     func createTable(table: TableModel)
 }
 
-class CreateTableVC: UIViewController {
+class CreateTableVC: UserBaseViewController {
 
     @IBOutlet weak var amountOfPersonsLabel: UILabel!
     @IBOutlet weak var amountStepper: UIStepper!

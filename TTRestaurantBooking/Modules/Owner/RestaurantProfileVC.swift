@@ -94,7 +94,7 @@ class RestaurantProfileVC: UserBaseViewController {
         nameTextField.text = restaurant.name
         workToTextField.text = restaurant.workTill.stringWithFormat(format: .time)
         workFromTextField.text = restaurant.workFrom.stringWithFormat(format: .time)
-        dishes = restaurant.dishes
+        dishes = restaurant.menu
         tables = restaurant.tables
         reloadData()
     }

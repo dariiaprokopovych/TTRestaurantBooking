@@ -23,13 +23,15 @@ class OwnerRestaurantsListVC: UserBaseViewController {
 
     // MARK: - private
     private func loadData() {
-        OwnerNetworkManager.getRestaurants(user: user) { isSuccess, error, data in 
-            guard isSuccess, let restaurants = data as? [Restaurant] else {
-                self.showErrorAlert(message: error?.localizedDescription)
-                return
+        OwnerNetworkManager.getRestaurants(user: user) { isSuccess, error, data in
+            DispatchQueue.main.async {
+                guard isSuccess, let restaurants = data as? [Restaurant] else {
+                    self.showErrorAlert(message: error?.localizedDescription)
+                    return
+                }
+                self.restaurants = restaurants
+                self.tableView.reloadData()
             }
-            self.restaurants = restaurants
-            self.tableView.reloadData()
         }
     }
     

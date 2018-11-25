@@ -32,7 +32,11 @@
                         <viewLayoutGuide key="safeArea" id="qDJ-Df-goO"/>
                     </view>
                     <navigationItem key="navigationItem" title="Restaurants" id="bhB-76-6i5">
-                        <barButtonItem key="rightBarButtonItem" title="Log Out" id="kNl-xl-dl7"/>
+                        <barButtonItem key="rightBarButtonItem" title="Log Out" id="kNl-xl-dl7">
+                            <connections>
+                                <action selector="onLogOut:" destination="6Pb-Zm-BaU" id="tgu-dx-Ysl"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="th6-Ve-BjH" id="wFk-xA-rkT"/>
@@ -121,7 +125,11 @@
                         <viewLayoutGuide key="safeArea" id="MIE-JL-azD"/>
                     </view>
                     <navigationItem key="navigationItem" title="Search restaurants" id="MSf-UA-07V">
-                        <barButtonItem key="rightBarButtonItem" title="Log Out" id="ZOp-TS-3Hh"/>
+                        <barButtonItem key="rightBarButtonItem" title="Log Out" id="ZOp-TS-3Hh">
+                            <connections>
+                                <action selector="onLogOut:" destination="yuM-3I-1bm" id="3AI-nb-dWo"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <connections>

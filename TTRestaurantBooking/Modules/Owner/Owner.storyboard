@@ -49,7 +49,11 @@
                         <viewLayoutGuide key="safeArea" id="yKr-YS-I2F"/>
                     </view>
                     <navigationItem key="navigationItem" title="Restaurants" id="C3H-cx-LAl">
-                        <barButtonItem key="rightBarButtonItem" title="Log Out" id="0yR-wy-s3i"/>
+                        <barButtonItem key="rightBarButtonItem" title="Log Out" id="0yR-wy-s3i">
+                            <connections>
+                                <action selector="onLogOut:" destination="mmm-Zs-7s8" id="6mW-ul-hE9"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <connections>
@@ -222,7 +226,11 @@
                         <viewLayoutGuide key="safeArea" id="ea8-E2-vij"/>
                     </view>
                     <navigationItem key="navigationItem" title="New restaurant" id="3hm-NO-g8y">
-                        <barButtonItem key="rightBarButtonItem" title="Log Out" id="6aE-d1-zIw"/>
+                        <barButtonItem key="rightBarButtonItem" title="Log Out" id="6aE-d1-zIw">
+                            <connections>
+                                <action selector="onLogOut:" destination="gCF-Tx-Y83" id="KHA-pb-ANJ"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="dishesTableView" destination="1dg-XY-haZ" id="Jcb-gX-rXM"/>
@@ -300,7 +308,11 @@
                         <viewLayoutGuide key="safeArea" id="h5G-mB-j8j"/>
                     </view>
                     <navigationItem key="navigationItem" title="New Table" id="yTs-qW-MB2">
-                        <barButtonItem key="rightBarButtonItem" title="Log Out" id="oED-aI-YbU"/>
+                        <barButtonItem key="rightBarButtonItem" title="Log Out" id="oED-aI-YbU">
+                            <connections>
+                                <action selector="onLogOut:" destination="rRf-ob-zP7" id="mkJ-x8-olJ"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="amountOfPersonsLabel" destination="6jn-ui-R2e" id="4vg-ZR-oYb"/>
@@ -378,7 +390,11 @@
                         <viewLayoutGuide key="safeArea" id="o4g-0v-OgZ"/>
                     </view>
                     <navigationItem key="navigationItem" title="New DIsh" id="vIL-WM-ch0">
-                        <barButtonItem key="rightBarButtonItem" title="Log Out" id="Ekp-S7-qje"/>
+                        <barButtonItem key="rightBarButtonItem" title="Log Out" id="Ekp-S7-qje">
+                            <connections>
+                                <action selector="onLogOut:" destination="cuB-bk-tO1" id="oI8-4f-OPy"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <connections>

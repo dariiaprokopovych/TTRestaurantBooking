@@ -8,7 +8,16 @@
 
 import UIKit
 
-class DishModel {
+class DishModel: Codable {
     var name: String = "Carbonara"
     var price: Int = 150
+    var dishId: Int = -1
+    var restaurantId: Int = -1
+    
+    enum CodingKeys: String, CodingKey {
+        case name
+        case price
+        case dishId
+        case restaurantId
+    }
 }

@@ -22,5 +22,6 @@ class OwnerRestaurantCell: UITableViewCell {
     private func setupUI() {
         guard let restaurant = restaurant else { return }
         restaurantNameLabel.text = restaurant.name
+        restaurantTimeLabel.text = restaurant.address
     }
 }

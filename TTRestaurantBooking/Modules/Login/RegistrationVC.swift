@@ -42,12 +42,14 @@ class RegistrationVC: BaseViewController {
         }
         
         LoginNetworkManager.register(role: role, email: email, password: password, name: name, age: age, sex: sex) { [weak self] (isSuccess, error, data) in
-            guard let self = self else { return }
-            guard isSuccess, let registrationModel = data as? UserModel else {
-                self.showErrorAlert(message: error?.localizedDescription)
-                return
+            DispatchQueue.main.async {
+                guard let self = self else { return }
+                guard isSuccess, let registrationModel = data as? UserModel else {
+                    self.showErrorAlert(message: error?.localizedDescription)
+                    return
+                }
+                self.goNext(for: registrationModel)
             }
-            self.goNext(for: registrationModel)
         }
     }
     
@@ -59,7 +61,10 @@ class RegistrationVC: BaseViewController {
         case .client:
             vc = UIStoryboard(name: "Client", bundle: nil).instantiateInitialViewController()!
         }
-        navigationController?.pushViewController(vc, animated: true)
+        if let _vc = vc as? UserBaseViewController {
+            _vc.user = user
+            navigationController?.pushViewController(_vc, animated: true)
+        }
     }
     
     // MARK: - ui

@@ -16,6 +16,7 @@ class Restaurant: Codable {
     var menu: [DishModel] = []
     var tables: [TableModel] = []
     var restaurantId: Int = -1
+    var userId: Int = -1
     
     enum CodingKeys: String, CodingKey {
         case name
@@ -25,6 +26,7 @@ class Restaurant: Codable {
         case tables
         case address
         case restaurantId
+        case userId
     }
     
     func encode(to encoder: Encoder) throws {
@@ -40,12 +42,16 @@ class Restaurant: Codable {
         if restaurantId != -1 {
             try container.encode(restaurantId, forKey: .restaurantId)
         }
+        if userId != -1 {
+            try container.encode(userId, forKey: .userId)
+        }
     }
     
     required init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         name = try container.decode(String.self, forKey: .name)
         address = try container.decode(String.self, forKey: .address)
+        userId = try container.decode(Int.self, forKey: .userId)
         restaurantId = try container.decode(Int.self, forKey: .restaurantId)
         menu = try container.decode([DishModel].self, forKey: .menu)
         tables = try container.decode([TableModel].self, forKey: .tables)

@@ -55,6 +55,7 @@ class RestaurantProfileVC: UserBaseViewController {
         restaurant!.tables = tables
         restaurant!.workFrom = fromHoursPicker.date
         restaurant!.workTill = toHoursPicker.date
+        restaurant!.userId = user.id
         if restaurant!.restaurantId != -1 {
             OwnerNetworkManager.editRestaurant(restaurant: restaurant!) { (isSuccess, error, data) in
                 DispatchQueue.main.async {

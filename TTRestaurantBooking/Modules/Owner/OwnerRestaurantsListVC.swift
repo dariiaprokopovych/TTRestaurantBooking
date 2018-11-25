@@ -49,6 +49,7 @@ class OwnerRestaurantsListVC: UserBaseViewController {
     fileprivate func showRestaurantProfile(restaurant: Restaurant) {
         guard let vc = UIStoryboard(name: "Owner", bundle: nil).instantiateViewController(withIdentifier: "\(RestaurantProfileVC.self)") as? RestaurantProfileVC else { return }
         vc.restaurant = restaurant
+        vc.user = user
         navigationController?.pushViewController(vc, animated: true)
     }
 }

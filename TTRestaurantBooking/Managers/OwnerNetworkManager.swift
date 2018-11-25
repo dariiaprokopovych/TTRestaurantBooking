@@ -10,7 +10,7 @@ import UIKit
 
 class OwnerNetworkManager: BaseNetworkManager {
     static func getRestaurants(user: UserModel, completion: @escaping Completion) {
-        let string = baseURL + "restaurant/usersrestaurants?userId=\(user.id)"
+        let string = baseURL + "restaurant/usersrestaurants?userid=\(user.id)"
         let url = URL(string: string)!
         var request = URLRequest(url: url)
         request.httpMethod = "GET"

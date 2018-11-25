@@ -8,12 +8,12 @@
 
 import UIKit
 
-enum Sex: Int {
+enum Sex: Int, Codable {
     case male
     case female
 }
 
-enum Role: Int {
+enum Role: Int, Codable {
     case client
     case owner
     
@@ -27,12 +27,23 @@ enum Role: Int {
     }
 }
 
-class UserModel {
+class UserModel: Codable {
     var id: Int = -1
     var role: Role = Role(rawValue: 0)!
     var name: String = ""
     var email: String = ""
     var password: String = ""
     var age: Int = -1
+    var sex: Sex = Sex(rawValue: 0)!
+    
+    enum CodingKeys: String, CodingKey {
+        case id = "UserId"
+        case role = "Role"
+        case name = "Name"
+        case password = "Password"
+        case email = "Email"
+        case age = "Age"
+        case sex = "Sex"
+    }
     
 }

@@ -42,6 +42,8 @@
 		DEE5D96C21A9C81C0057F4F1 /* DishTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEE5D96A21A9C81C0057F4F1 /* DishTVCell.xib */; };
 		DEE5D97021A9DE590057F4F1 /* TableTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE5D96E21A9DE590057F4F1 /* TableTVCell.swift */; };
 		DEE5D97121A9DE590057F4F1 /* TableTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEE5D96F21A9DE590057F4F1 /* TableTVCell.xib */; };
+		DEE5D97321A9F9880057F4F1 /* BaseNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE5D97221A9F9880057F4F1 /* BaseNetworkManager.swift */; };
+		DEE5D97521AAA9230057F4F1 /* Codable+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE5D97421AAA9230057F4F1 /* Codable+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -82,6 +84,8 @@
 		DEE5D96A21A9C81C0057F4F1 /* DishTVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DishTVCell.xib; sourceTree = "<group>"; };
 		DEE5D96E21A9DE590057F4F1 /* TableTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableTVCell.swift; sourceTree = "<group>"; };
 		DEE5D96F21A9DE590057F4F1 /* TableTVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableTVCell.xib; sourceTree = "<group>"; };
+		DEE5D97221A9F9880057F4F1 /* BaseNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNetworkManager.swift; sourceTree = "<group>"; };
+		DEE5D97421AAA9230057F4F1 /* Codable+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Codable+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +169,7 @@
 			children = (
 				DEE5D92B21A889330057F4F1 /* UIColor+Extensions.swift */,
 				DEE5D95921A9A2A60057F4F1 /* Date+Extensions.swift */,
+				DEE5D97421AAA9230057F4F1 /* Codable+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -216,6 +221,7 @@
 				DEE5D95221A951FB0057F4F1 /* LoginNetworkManager.swift */,
 				DEE5D95721A99E680057F4F1 /* ClientNetworkManager.swift */,
 				DEE5D95D21A9B8F40057F4F1 /* OwnerNetworkManager.swift */,
+				DEE5D97221A9F9880057F4F1 /* BaseNetworkManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -345,6 +351,7 @@
 				DEE5D94A21A8AC110057F4F1 /* RestaurantProfileVC.swift in Sources */,
 				DEE5D95321A951FB0057F4F1 /* LoginNetworkManager.swift in Sources */,
 				DEE5D94621A8AB690057F4F1 /* SearchRestaurantVC.swift in Sources */,
+				DEE5D97321A9F9880057F4F1 /* BaseNetworkManager.swift in Sources */,
 				DEE5D95021A94C2B0057F4F1 /* BaseViewController.swift in Sources */,
 				DEE5D91821A7488C0057F4F1 /* ViewController.swift in Sources */,
 				DEE5D95E21A9B8F40057F4F1 /* OwnerNetworkManager.swift in Sources */,
@@ -358,6 +365,7 @@
 				DEE5D93021A88F000057F4F1 /* LoginVC.swift in Sources */,
 				DEE5D94821A8ABD00057F4F1 /* OwnerRestaurantsListVC.swift in Sources */,
 				DEE5D96821A9C75E0057F4F1 /* TableModel.swift in Sources */,
+				DEE5D97521AAA9230057F4F1 /* Codable+Extensions.swift in Sources */,
 				DEE5D93221A88F130057F4F1 /* RegistrationVC.swift in Sources */,
 				DEE5D91621A7488C0057F4F1 /* AppDelegate.swift in Sources */,
 				DEE5D94C21A8AC480057F4F1 /* CreateTableVC.swift in Sources */,

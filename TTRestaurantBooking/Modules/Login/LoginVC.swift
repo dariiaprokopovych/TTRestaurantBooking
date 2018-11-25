@@ -29,12 +29,14 @@ class LoginVC: BaseViewController {
                 return
         }
         LoginNetworkManager.login(email: email, password: password) { [weak self] isSuccess, error, data in
-            guard let self = self else { return }
-            guard isSuccess, let userModel = data as? UserModel  else {
-                self.showErrorAlert(message: error?.localizedDescription)
-                return
+            DispatchQueue.main.async {
+                guard let self = self else { return }
+                guard isSuccess, let userModel = data as? UserModel  else {
+                    self.showErrorAlert(message: error?.localizedDescription)
+                    return
+                }
+                self.goNext(for: userModel)
             }
-            self.goNext(for: userModel)
         }
     }
     

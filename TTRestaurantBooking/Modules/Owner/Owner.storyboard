@@ -76,10 +76,10 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rio-v7-ehH">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="717"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="767"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="QqA-RY-x74">
-                                                <rect key="frame" x="30" y="80" width="315" height="547"/>
+                                                <rect key="frame" x="30" y="80" width="315" height="597"/>
                                                 <subviews>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9RB-a3-54i">
                                                         <rect key="frame" x="0.0" y="0.0" width="315" height="30"/>
@@ -87,20 +87,26 @@
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Work from:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sqW-xh-gmX">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SHn-ar-wrK">
                                                         <rect key="frame" x="0.0" y="50" width="315" height="30"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Work till:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oTl-N4-9qv">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Work from:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sqW-xh-gmX">
                                                         <rect key="frame" x="0.0" y="100" width="315" height="30"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Work till:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oTl-N4-9qv">
+                                                        <rect key="frame" x="0.0" y="150" width="315" height="30"/>
+                                                        <nil key="textColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="0AN-Qq-9oN">
-                                                        <rect key="frame" x="0.0" y="150" width="315" height="188.5"/>
+                                                        <rect key="frame" x="0.0" y="200" width="315" height="188.5"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dishes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="45s-Md-eJ4">
                                                                 <rect key="frame" x="0.0" y="0.0" width="315" height="20.5"/>
@@ -139,7 +145,7 @@
                                                         <color key="tintColor" red="0.93074501970000001" green="0.98052901029999995" blue="0.73984363600000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="qYa-6C-ZD7">
-                                                        <rect key="frame" x="0.0" y="358.5" width="315" height="188.5"/>
+                                                        <rect key="frame" x="0.0" y="408.5" width="315" height="188.5"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tables" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jrj-JF-Hwb">
                                                                 <rect key="frame" x="0.0" y="0.0" width="315" height="20.5"/>
@@ -180,7 +186,7 @@
                                                 </subviews>
                                             </stackView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u8R-zH-faI">
-                                                <rect key="frame" x="30" y="637" width="315" height="50"/>
+                                                <rect key="frame" x="30" y="687" width="315" height="50"/>
                                                 <color key="backgroundColor" red="0.93074501970000001" green="0.98052901029999995" blue="0.73984363600000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="PuR-43-9e7"/>
@@ -233,6 +239,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="adressTextField" destination="SHn-ar-wrK" id="Fby-0n-ApJ"/>
                         <outlet property="dishesTableView" destination="1dg-XY-haZ" id="Jcb-gX-rXM"/>
                         <outlet property="dishesTableViewHeight" destination="S3m-aE-8f6" id="WPr-Zl-0As"/>
                         <outlet property="nameTextField" destination="9RB-a3-54i" id="fgb-VJ-lAA"/>

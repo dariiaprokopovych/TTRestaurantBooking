@@ -17,6 +17,7 @@ class RestaurantProfileVC: UserBaseViewController {
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var workFromTextField: UITextField!
     @IBOutlet weak var workToTextField: UITextField!
+    @IBOutlet weak var adressTextField: UITextField!
     
     private let cellHeight: CGFloat = 44.0
     private var dishes: [DishModel] = []
@@ -40,9 +41,41 @@ class RestaurantProfileVC: UserBaseViewController {
         guard let name = nameTextField.text, name.count > 0,
             dishes.count > 0, tables.count > 0,
             (workFromTextField.text?.count ?? 0) > 0,
-            (workToTextField.text?.count ?? 0) > 0 else {
+            (workToTextField.text?.count ?? 0) > 0,
+        (adressTextField.text?.count ?? 0) > 0 else {
                 showErrorAlert(message: "Please fill all required data")
                 return
+        }
+        if restaurant == nil {
+            restaurant = Restaurant()
+        }
+        restaurant!.address = adressTextField.text!
+        restaurant!.menu = dishes
+        restaurant!.name = name
+        restaurant!.tables = tables
+        restaurant!.workFrom = fromHoursPicker.date
+        restaurant!.workTill = toHoursPicker.date
+        if restaurant!.restaurantId != -1 {
+            OwnerNetworkManager.editRestaurant(restaurant: restaurant!) { (isSuccess, error, data) in
+                DispatchQueue.main.async {
+                    guard isSuccess else {
+                        self.showErrorAlert(message: error?.localizedDescription)
+                        return
+                    }
+                    self.navigationController?.popViewController(animated: true)
+                }
+            }
+        } else {
+            OwnerNetworkManager.addRestaurant(restaurant: restaurant!) { (isSuccess, error, data) in
+                DispatchQueue.main.async {
+                    guard isSuccess else {
+                        self.showErrorAlert(message: error?.localizedDescription)
+                        return
+                    }
+                    self.navigationController?.popViewController(animated: true)
+                }
+            }
+
         }
     }
     
@@ -93,7 +126,10 @@ class RestaurantProfileVC: UserBaseViewController {
         guard let restaurant = restaurant else { return }
         nameTextField.text = restaurant.name
         workToTextField.text = restaurant.workTill.stringWithFormat(format: .time)
+        toHoursPicker.date = restaurant.workTill
         workFromTextField.text = restaurant.workFrom.stringWithFormat(format: .time)
+        fromHoursPicker.date = restaurant.workFrom
+        adressTextField.text = restaurant.address
         dishes = restaurant.menu
         tables = restaurant.tables
         reloadData()

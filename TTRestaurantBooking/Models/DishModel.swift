@@ -20,4 +20,16 @@ class DishModel: Codable {
         case dishId
         case restaurantId
     }
+    
+    func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: CodingKeys.self)
+        try container.encode(price, forKey: .price)
+        try container.encode(name, forKey: .name)
+        if restaurantId != -1 {
+            try container.encode(restaurantId, forKey: .restaurantId)
+        }
+        if dishId != -1 {
+            try container.encode(dishId, forKey: .dishId)
+        }
+    }
 }

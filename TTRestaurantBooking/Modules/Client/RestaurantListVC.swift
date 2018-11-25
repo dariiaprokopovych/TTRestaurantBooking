@@ -11,6 +11,8 @@ import UIKit
 class RestaurantListVC: UserBaseViewController {
 
     var restaurants: [Restaurant] = []
+    var dateFrom: Date!
+    var dateTo: Date!
     
     @IBOutlet private weak var tableView: UITableView!
     
@@ -60,7 +62,7 @@ extension RestaurantListVC: UITableViewDataSource {
 extension RestaurantListVC: RestaurantCellDelegate {
     
     func bookRestaurant(restaurant: Restaurant) {
-        ClientNetworkManager.bookRestaurant(restaurant: restaurant) {  isSuccess, error in
+        ClientNetworkManager.bookRestaurant(restaurant: restaurant, dateTo: dateTo, dateFrom: dateFrom) {  isSuccess, error in
             //guard let self = self else { return }
             guard isSuccess else {
                 self.showErrorAlert(message: error?.localizedDescription)

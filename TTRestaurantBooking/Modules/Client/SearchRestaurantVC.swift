@@ -36,12 +36,14 @@ class SearchRestaurantVC: UserBaseViewController {
             return
         }
         ClientNetworkManager.searchForTable(amountOfPeople: amountOfPeople, date: datePicker.date, fromHours: fromHoursPicker.date, toHours: toHoursPicker.date) { [weak self] (isSuccess, error, data) in
-            guard let self = self else { return }
-            guard isSuccess, let restaurants = data as? [Restaurant] else {
-                self.showErrorAlert(message: error?.localizedDescription)
-                return
+            DispatchQueue.main.async {
+                guard let self = self else { return }
+                guard isSuccess, let restaurants = data as? [Restaurant] else {
+                    self.showErrorAlert(message: error?.localizedDescription)
+                    return
+                }
+                self.showRestaurants(restaurants: restaurants)
             }
-            self.showRestaurants(restaurants: restaurants)
         }
     }
     
@@ -78,6 +80,8 @@ class SearchRestaurantVC: UserBaseViewController {
     
     private func showRestaurants(restaurants: [Restaurant]) {
         guard let vc = UIStoryboard(name: "Client", bundle: nil).instantiateViewController(withIdentifier: "\(RestaurantListVC.self)") as? RestaurantListVC else { return }
+        vc.dateTo = Date.combine(date: datePicker.date, hours: toHoursPicker.date)
+        vc.dateFrom = Date.combine(date: datePicker.date, hours: fromHoursPicker.date)
         vc.restaurants = restaurants
         navigationController?.pushViewController(vc, animated: true)
     }

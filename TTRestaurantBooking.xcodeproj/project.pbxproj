@@ -146,8 +146,8 @@
 		DEE5D92821A885760057F4F1 /* Client */ = {
 			isa = PBXGroup;
 			children = (
-				DEE5D93521A890AA0057F4F1 /* RestaurantListVC.swift */,
 				DEE5D94521A8AB690057F4F1 /* SearchRestaurantVC.swift */,
+				DEE5D93521A890AA0057F4F1 /* RestaurantListVC.swift */,
 				DEE5D93721A890E10057F4F1 /* Client.storyboard */,
 			);
 			path = Client;

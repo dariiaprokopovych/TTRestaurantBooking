@@ -21,6 +21,7 @@ class RestaurantCell: UITableViewCell {
     var restaurant: Restaurant? {
         didSet {
             restaurantNameLabel?.text = restaurant?.name
+            minCheckLabel.text = restaurant?.address
         }
     }
     

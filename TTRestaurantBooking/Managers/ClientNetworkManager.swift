@@ -9,7 +9,7 @@
 import UIKit
 
 class ClientNetworkManager: BaseNetworkManager {
-
+    
     static func searchForTable(amountOfPeople: Int, date: Date, fromHours: Date, toHours: Date, completion: @escaping Completion) {
         let fromDate = Date.combine(date: date, hours: fromHours).stringWithFormat(format: .fullFormatDate)
         let toDate = Date.combine(date: date, hours: toHours).stringWithFormat(format: .fullFormatDate)
@@ -40,16 +40,17 @@ class ClientNetworkManager: BaseNetworkManager {
         task.resume()
     }
     
-    static func bookRestaurant(restaurant: Restaurant, dateTo: Date, dateFrom: Date, completion: @escaping EmptyCompletion) {
+    static func bookRestaurant(restaurant: Restaurant, userId: Int, dateTo: Date, dateFrom: Date, completion: @escaping EmptyCompletion) {
         let string = baseURL + "restaurant/addbooking"
-        let dataDict = ["tableId" : restaurant.tables[0].tableId,
-                    "timeFrom" : dateFrom.stringWithFormat(format: .fullWithoutSeconds),
-                    "timeTill" : dateTo.stringWithFormat(format: .fullWithoutSeconds)] as [String : Any]
+        let dataDict = ["userId" : userId,
+            "tableId" : restaurant.tables[0].tableId,
+            "timeFrom" : dateFrom.stringWithFormat(format: .fullWithoutSeconds),
+            "timeTill" : dateTo.stringWithFormat(format: .fullWithoutSeconds)] as [String : Any]
         let url = URL(string: string)!
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
         do {
-        request.httpBody = try JSONSerialization.data(withJSONObject: dataDict, options: .prettyPrinted)
+            request.httpBody = try JSONSerialization.data(withJSONObject: dataDict, options: .prettyPrinted)
         }
         catch let error {
             completion(false, error)
@@ -62,10 +63,11 @@ class ClientNetworkManager: BaseNetworkManager {
         request.addValue("application/json", forHTTPHeaderField: "Accept")
         
         let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
-            guard error == nil, let data = data else {
+            guard error == nil else {
                 completion(false, error)
                 return
             }
+            completion(true, nil)
         }
         task.resume()
     }

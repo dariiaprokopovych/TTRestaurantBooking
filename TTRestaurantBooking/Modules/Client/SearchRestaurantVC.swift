@@ -83,6 +83,7 @@ class SearchRestaurantVC: UserBaseViewController {
         vc.dateTo = Date.combine(date: datePicker.date, hours: toHoursPicker.date)
         vc.dateFrom = Date.combine(date: datePicker.date, hours: fromHoursPicker.date)
         vc.restaurants = restaurants
+        vc.user = user
         navigationController?.pushViewController(vc, animated: true)
     }
 }

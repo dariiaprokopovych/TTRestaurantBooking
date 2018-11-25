@@ -62,13 +62,15 @@ extension RestaurantListVC: UITableViewDataSource {
 extension RestaurantListVC: RestaurantCellDelegate {
     
     func bookRestaurant(restaurant: Restaurant) {
-        ClientNetworkManager.bookRestaurant(restaurant: restaurant, dateTo: dateTo, dateFrom: dateFrom) {  isSuccess, error in
+        ClientNetworkManager.bookRestaurant(restaurant: restaurant, userId: user.id, dateTo: dateTo, dateFrom: dateFrom) {  isSuccess, error in
             //guard let self = self else { return }
-            guard isSuccess else {
-                self.showErrorAlert(message: error?.localizedDescription)
-                return
+            DispatchQueue.main.async {
+                guard isSuccess else {
+                    self.showErrorAlert(message: error?.localizedDescription)
+                    return
+                }
+                self.showSuccessPopUp(name: restaurant.name)
             }
-            self.showSuccessPopUp(name: restaurant.name)
         }
     }
     

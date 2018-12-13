@@ -28,8 +28,10 @@ class LoginVC: BaseViewController {
                 showErrorAlert(message: "Please fill required fields")
                 return
         }
+        UIActivityIndicatorView.startShowing()
         LoginNetworkManager.login(email: email, password: password) { [weak self] isSuccess, error, data in
             DispatchQueue.main.async {
+                UIActivityIndicatorView.stopShowing()
                 guard let self = self else { return }
                 guard isSuccess, let userModel = data as? UserModel  else {
                     self.showErrorAlert(message: error?.localizedDescription)

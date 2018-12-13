@@ -27,8 +27,10 @@ class OwnerRestaurantsListVC: UserBaseViewController {
 
     // MARK: - private
     private func loadData() {
+        UIActivityIndicatorView.startShowing()
         OwnerNetworkManager.getRestaurants(user: user) { isSuccess, error, data in
             DispatchQueue.main.async {
+                UIActivityIndicatorView.stopShowing()
                 guard isSuccess, let restaurants = data as? [Restaurant] else {
                     self.showErrorAlert(message: error?.localizedDescription)
                     return

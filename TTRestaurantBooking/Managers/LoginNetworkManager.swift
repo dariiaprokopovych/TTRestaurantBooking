@@ -36,8 +36,8 @@ class LoginNetworkManager: BaseNetworkManager {
                 completion(false, error, nil)
                 return
             }
-            let token = dataDict[accessTokenKey]
-            UserDefaults.standard.set(token, forKey: accessTokenKey)
+            let token = dataDict[accessTokenKey] as! String
+            UserDefaults.standard.set("Bearer \(token)", forKey: accessTokenKey)
             do {
                 let userDict = dataDict["userEntity"] as? [String: Any]
                 

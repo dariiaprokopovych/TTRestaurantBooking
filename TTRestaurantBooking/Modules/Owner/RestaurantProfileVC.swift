@@ -57,8 +57,10 @@ class RestaurantProfileVC: UserBaseViewController {
         restaurant!.workTill = toHoursPicker.date
         restaurant!.userId = user.id
         if restaurant!.restaurantId != -1 {
+            UIActivityIndicatorView.startShowing()
             OwnerNetworkManager.editRestaurant(restaurant: restaurant!) { (isSuccess, error, data) in
                 DispatchQueue.main.async {
+                    UIActivityIndicatorView.stopShowing()
                     guard isSuccess else {
                         self.showErrorAlert(message: error?.localizedDescription)
                         return
@@ -67,8 +69,10 @@ class RestaurantProfileVC: UserBaseViewController {
                 }
             }
         } else {
+            UIActivityIndicatorView.startShowing()
             OwnerNetworkManager.addRestaurant(restaurant: restaurant!) { (isSuccess, error, data) in
                 DispatchQueue.main.async {
+                    UIActivityIndicatorView.stopShowing()
                     guard isSuccess else {
                         self.showErrorAlert(message: error?.localizedDescription)
                         return

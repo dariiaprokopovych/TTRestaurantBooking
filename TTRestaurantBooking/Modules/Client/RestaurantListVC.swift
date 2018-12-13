@@ -62,9 +62,11 @@ extension RestaurantListVC: UITableViewDataSource {
 extension RestaurantListVC: RestaurantCellDelegate {
     
     func bookRestaurant(restaurant: Restaurant) {
+        UIActivityIndicatorView.startShowing()
         ClientNetworkManager.bookRestaurant(restaurant: restaurant, userId: user.id, dateTo: dateTo, dateFrom: dateFrom) {  isSuccess, error in
             //guard let self = self else { return }
             DispatchQueue.main.async {
+                UIActivityIndicatorView.stopShowing()
                 guard isSuccess else {
                     self.showErrorAlert(message: error?.localizedDescription)
                     return

@@ -30,7 +30,7 @@ class OwnerNetworkManager: BaseNetworkManager {
                 completion(true, nil, restaurants)
             }
             catch let error {
-                completion(false, error, nil)
+                completion(true, nil, [])
                 return
             }
         }

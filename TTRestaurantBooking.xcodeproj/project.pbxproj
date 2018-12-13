@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DE0C3A6421C1BF77003485AF /* UIView+Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0C3A6321C1BF77003485AF /* UIView+Loader.swift */; };
 		DEE5D91621A7488C0057F4F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE5D91521A7488C0057F4F1 /* AppDelegate.swift */; };
 		DEE5D91821A7488C0057F4F1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE5D91721A7488C0057F4F1 /* ViewController.swift */; };
 		DEE5D91B21A7488C0057F4F1 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEE5D91921A7488C0057F4F1 /* Login.storyboard */; };
@@ -47,6 +48,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DE0C3A6321C1BF77003485AF /* UIView+Loader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Loader.swift"; sourceTree = "<group>"; };
 		DEE5D91221A7488C0057F4F1 /* TTRestaurantBooking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TTRestaurantBooking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEE5D91521A7488C0057F4F1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DEE5D91721A7488C0057F4F1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -167,6 +169,7 @@
 		DEE5D92A21A889110057F4F1 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				DE0C3A6321C1BF77003485AF /* UIView+Loader.swift */,
 				DEE5D92B21A889330057F4F1 /* UIColor+Extensions.swift */,
 				DEE5D95921A9A2A60057F4F1 /* Date+Extensions.swift */,
 				DEE5D97421AAA9230057F4F1 /* Codable+Extensions.swift */,
@@ -369,6 +372,7 @@
 				DEE5D93221A88F130057F4F1 /* RegistrationVC.swift in Sources */,
 				DEE5D91621A7488C0057F4F1 /* AppDelegate.swift in Sources */,
 				DEE5D94C21A8AC480057F4F1 /* CreateTableVC.swift in Sources */,
+				DE0C3A6421C1BF77003485AF /* UIView+Loader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -517,6 +521,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L748ZMC8YR;
 				INFOPLIST_FILE = TTRestaurantBooking/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -535,6 +540,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L748ZMC8YR;
 				INFOPLIST_FILE = TTRestaurantBooking/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

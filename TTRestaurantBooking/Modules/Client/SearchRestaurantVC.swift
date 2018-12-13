@@ -35,8 +35,10 @@ class SearchRestaurantVC: UserBaseViewController {
             showErrorAlert(message: "Please fill all required data")
             return
         }
+        UIActivityIndicatorView.startShowing()
         ClientNetworkManager.searchForTable(amountOfPeople: amountOfPeople, date: datePicker.date, fromHours: fromHoursPicker.date, toHours: toHoursPicker.date) { [weak self] (isSuccess, error, data) in
             DispatchQueue.main.async {
+                UIActivityIndicatorView.stopShowing()
                 guard let self = self else { return }
                 guard isSuccess, let restaurants = data as? [Restaurant] else {
                     self.showErrorAlert(message: error?.localizedDescription)

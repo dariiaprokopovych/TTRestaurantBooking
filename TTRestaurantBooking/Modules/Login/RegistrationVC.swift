@@ -40,9 +40,10 @@ class RegistrationVC: BaseViewController {
                 showErrorAlert(message: "Please fill all data")
                 return
         }
-        
+        UIActivityIndicatorView.startShowing()
         LoginNetworkManager.register(role: role, email: email, password: password, name: name, age: age, sex: sex) { [weak self] (isSuccess, error, data) in
             DispatchQueue.main.async {
+                UIActivityIndicatorView.stopShowing()
                 guard let self = self else { return }
                 guard isSuccess, let registrationModel = data as? UserModel else {
                     self.showErrorAlert(message: error?.localizedDescription)

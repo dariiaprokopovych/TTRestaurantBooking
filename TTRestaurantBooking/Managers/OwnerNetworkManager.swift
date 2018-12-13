@@ -14,9 +14,9 @@ class OwnerNetworkManager: BaseNetworkManager {
         let url = URL(string: string)!
         var request = URLRequest(url: url)
         request.httpMethod = "GET"
-        if let token = UserDefaults.standard.object(forKey: accessTokenKey) as? String {
-            request.setValue("Authorization", forHTTPHeaderField: token)
-        }
+//        if let token = UserDefaults.standard.object(forKey: accessTokenKey) as? String {
+//            request.setValue("Authorization", forHTTPHeaderField: token)
+//        }
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         request.addValue("application/json", forHTTPHeaderField: "Accept")
         
@@ -42,9 +42,9 @@ class OwnerNetworkManager: BaseNetworkManager {
         let url = URL(string: string)!
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
-        if let token = UserDefaults.standard.object(forKey: accessTokenKey) as? String {
-            request.setValue("Authorization", forHTTPHeaderField: token)
-        }
+//        if let token = UserDefaults.standard.object(forKey: accessTokenKey) as? String {
+//            request.setValue("Authorization", forHTTPHeaderField: token)
+//        }
         request.httpBody = try? JSONEncoder().encode(restaurant)
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         request.addValue("application/json", forHTTPHeaderField: "Accept")
@@ -64,9 +64,9 @@ class OwnerNetworkManager: BaseNetworkManager {
         let url = URL(string: string)!
         var request = URLRequest(url: url)
         request.httpMethod = "PUT"
-        if let token = UserDefaults.standard.object(forKey: accessTokenKey) as? String {
-            request.setValue("Authorization", forHTTPHeaderField: token)
-        }
+//        if let token = UserDefaults.standard.object(forKey: accessTokenKey) as? String {
+//            request.setValue("Authorization", forHTTPHeaderField: token)
+//        }
         request.httpBody = try? JSONEncoder().encode(restaurant)
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         request.addValue("application/json", forHTTPHeaderField: "Accept")

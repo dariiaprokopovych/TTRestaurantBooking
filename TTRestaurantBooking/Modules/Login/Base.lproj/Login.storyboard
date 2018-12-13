@@ -65,6 +65,16 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qar-Sn-RqL">
                                 <rect key="frame" x="0.0" y="265" width="375" height="402"/>
                                 <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c4U-AM-CGb">
+                                        <rect key="frame" x="30" y="342" width="315" height="30"/>
+                                        <color key="backgroundColor" red="0.93074501970000001" green="0.98052901029999995" blue="0.73984363600000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <state key="normal" title="About us">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="97b-BP-5HN" kind="show" id="5qB-fG-gY8"/>
+                                        </connections>
+                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xGc-Or-LWr">
                                         <rect key="frame" x="107" y="110" width="161" height="30"/>
                                         <state key="normal" title="Don't have an account?">
@@ -91,9 +101,12 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.70691908950000004" green="0.81327551600000003" blue="0.74606460409999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
+                                    <constraint firstItem="c4U-AM-CGb" firstAttribute="width" secondItem="MOr-zA-SKl" secondAttribute="width" id="0jg-yN-P7w"/>
                                     <constraint firstItem="xGc-Or-LWr" firstAttribute="centerX" secondItem="qar-Sn-RqL" secondAttribute="centerX" id="1m3-fS-zm2"/>
+                                    <constraint firstAttribute="bottom" secondItem="c4U-AM-CGb" secondAttribute="bottom" constant="30" id="9mO-M7-bj5"/>
                                     <constraint firstItem="xGc-Or-LWr" firstAttribute="top" secondItem="MOr-zA-SKl" secondAttribute="bottom" constant="30" id="GXj-KW-kes"/>
                                     <constraint firstItem="MOr-zA-SKl" firstAttribute="top" secondItem="qar-Sn-RqL" secondAttribute="top" constant="30" id="Y8P-VC-WbC"/>
+                                    <constraint firstItem="c4U-AM-CGb" firstAttribute="centerX" secondItem="qar-Sn-RqL" secondAttribute="centerX" id="aHv-2t-1jN"/>
                                     <constraint firstItem="MOr-zA-SKl" firstAttribute="centerX" secondItem="qar-Sn-RqL" secondAttribute="centerX" id="xe3-Px-IZi"/>
                                 </constraints>
                             </view>
@@ -283,6 +296,36 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IVS-HQ-yrL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1105" y="134"/>
+        </scene>
+        <!--About us-->
+        <scene sceneID="xpo-fx-y6D">
+            <objects>
+                <viewController title="About us" id="97b-BP-5HN" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3XG-ij-Hsl">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eLi-Hn-NnN">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">Welcome to the Restaurant Manager. Our app allows you to find a suitable table for your chosen date and time and book it. As a restaurant owner, you can add your restaurants with all needed information and they will be available for other users to book. At any time you can update your information.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.70691908950000004" green="0.81327551600000003" blue="0.74606460409999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="eLi-Hn-NnN" firstAttribute="top" secondItem="5WM-P8-1Y7" secondAttribute="top" id="1LL-d0-KCl"/>
+                            <constraint firstItem="eLi-Hn-NnN" firstAttribute="leading" secondItem="5WM-P8-1Y7" secondAttribute="leading" id="MXF-m4-nxb"/>
+                            <constraint firstItem="5WM-P8-1Y7" firstAttribute="bottom" secondItem="eLi-Hn-NnN" secondAttribute="bottom" id="Ncx-3y-AVT"/>
+                            <constraint firstItem="5WM-P8-1Y7" firstAttribute="trailing" secondItem="eLi-Hn-NnN" secondAttribute="trailing" id="SDd-Ad-mwd"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="5WM-P8-1Y7"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0fw-nI-AI7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-7444" y="-2082"/>
         </scene>
     </scenes>
 </document>
